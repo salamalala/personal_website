@@ -84,7 +84,7 @@ a:hover {
   left: 50%;
   background: #3BBCAD;
   /*blue*/
- 
+
 }
 
 .block-main > section:nth-child(3) {
@@ -108,40 +108,45 @@ a:hover {
   width: 100%;
   height: 100%;
 
-    /* Centering with flexbox */
-    display: -webkit-box;
-    display: -moz-box;
+  /* Centering with flexbox */
+  display: -webkit-box;
+  display: -moz-box;
 
-    display: -ms-flexbox;
-    display: -webkit-flex;
-    display: flex;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
 
 
-    -webkit-flex-direction: column;
-    -ms-flex-direction: column;
-    flex-direction: column;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
 
-    /*The flex items will wrap onto additional flex lines if there isn’t enough room for them on the first flex line.*/
-    -webkit-flex-wrap: wrap;
-    -ms-flex-wrap: wrap;
-    flex-wrap: wrap;
+  /*The flex items will wrap onto additional flex lines if there isn’t enough room for them on the first flex line.*/
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
 
-    -webkit-box-pack: center;
-    -moz-box-pack: center;
+  -webkit-box-pack: center;
+  -moz-box-pack: center;
 
-    /*aligns flex items along the main axis of the current line of the flex container*/
-    -webkit-justify-content: center;
-    -ms-flex-pack: center;
-    justify-content: center;
+  /*aligns flex items along the main axis of the current line of the flex container*/
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
 
-    /*aligns flex items along the cross axis of the current line of the flex container*/
+  /*aligns flex items along the cross axis of the current line of the flex container*/
 
-    -webkit-box-align: center;
-    -moz-box-align: center;
-    -webkit-align-items: center;
-    -ms-flex-align: center;
-    align-items: center;
-  }
+  -webkit-box-align: center;
+  -moz-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.bounce-in{
+  -webkit-animation: bounceInDown 0.7s both cubic-bezier(.63,.09,.75,.46); 
+  animation-duration: bounceInDown 0.7s both cubic-bezier(.63,.09,.75,.46); 
+}
 
 .block-on-top {
   position: relative;
@@ -227,8 +232,8 @@ a:hover {
 
 .block-icon-about:before {
   content: "\e03F";
- font-family: 'icomoon';
- speak: none;
+  font-family: 'icomoon';
+  speak: none;
 }
 
 .block-icon-contact:before {

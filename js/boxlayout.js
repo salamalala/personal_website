@@ -14,11 +14,11 @@ var Boxlayout = (function() {
     $workPanels = $workPanelsContainer.children( 'div' ),
     totalWorkPanels = $workPanels.length,
     // navigating the work panels
-    $nextWorkItem = $workPanelsContainer.find( 'nav > span.block-next-work' ),
+    $nextWorkItem = $workPanelsContainer.find( 'span.block-next-work' ),
     // if currently navigating the work items
     isAnimating = false,
     // close work panel trigger
-    $closeWorkItem = $workPanelsContainer.find( 'nav > span.block-icon-close' ),
+    $closeWorkItem = $workPanelsContainer.find( 'span.block-icon-close' ),
     transEndEventNames = {
       'WebkitTransition' : 'webkitTransitionEnd',
       'MozTransition' : 'transitionend',
