@@ -21,13 +21,19 @@
 
       </section>
       
-      <section id="block-work-section">
+      <section id="block-project-section">
         <div class="block-on-top">
           <h2 class="block-icon block-icon-projects">Projects</h2>
         </div>
         <div class="block-content">
           <h2>My Projects</h2>
-          <p>Mung bean maize dandelion sea lettuce catsear bunya nuts ricebean tatsoi caulie horseradish pea.</p>
+          <p>Here are some projects I've worked on over the last year:</p>
+          <ul id="block-work-items">
+            <li data-panel="panel-1"><a href="#"></a></li>
+            <li data-panel="panel-2"><a href="#"></a></li>
+            <li data-panel="panel-3"><a href="#"></a></li>
+            <li data-panel="panel-4"><a href="#"></a></li>
+          </ul>
         </div>
         <span class="block-icon block-icon-close"></span>
       </section>
@@ -67,6 +73,13 @@
 
 
   </div> <!-- /container -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script src="js/boxlayout.js"></script>
+  <script>
+    $(function() {
+      Boxlayout.init();
+    });
+  </script>
   
 </body>
 </html>
