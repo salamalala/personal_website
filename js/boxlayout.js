@@ -1,7 +1,7 @@
 var Boxlayout = (function() {
 
   var $element = $( '#block-main' ),
-    $sections = $element.children( 'section' ),
+    $sections = $element.children( 'section:not(:first)' ),
 
     // projects section
     $sectionProject = $( '#block-project-section' ),
