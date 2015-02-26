@@ -1,21 +1,28 @@
 var Boxlayout = (function() {
 
   var $element = $( '#block-main' ),
-  $sections = $element.children( 'section:not(:first)' ),
-    // works section
-    $sectionWork = $( '#block-work-section' ),
-    // work items
+
+    $sections = $element.children( 'section:not(:first)' ),
+
+    // projects section
+    $sectionProject = $( '#block-project-section' ),
+
+    // projects items
     $workItems = $( '#block-work-items > li' ),
-    // work panels
+
+    // projects panels
+
     $workPanelsContainer = $( '#block-panel-work-items' ),
     $workPanels = $workPanelsContainer.children( 'div' ),
     totalWorkPanels = $workPanels.length,
     // navigating the work panels
-    $nextWorkItem = $workPanelsContainer.find( 'nav > span.block-next-work' ),
+
+    $nextWorkItem = $workPanelsContainer.find( 'span.block-next-work' ),
     // if currently navigating the work items
     isAnimating = false,
     // close work panel trigger
-    $closeWorkItem = $workPanelsContainer.find( 'nav > span.block-icon-close' ),
+    $closeWorkItem = $workPanelsContainer.find( 'span.block-icon-close' ),
+
     transEndEventNames = {
       'WebkitTransition' : 'webkitTransitionEnd',
       'MozTransition' : 'transitionend',
@@ -28,15 +35,16 @@ var Boxlayout = (function() {
     // support css transitions
     supportTransitions = Modernizr.csstransitions;
 
-    function init() {
-      initEvents();
-    }
+  function init() {
+    initEvents();
+  }
 
-    function initEvents() {
+  function initEvents() {
+    
+    $sections.each( function() {
+      
+      var $section = $( this );
 
-      $sections.each( function() {
-
-        var $section = $( this );
 
       // expand the clicked section and scale down the others
       $section.on( 'click', function() {
@@ -66,11 +74,13 @@ var Boxlayout = (function() {
 
     } );
 
-    // clicking on a work item: the current section scales down and the respective work panel slides up
+
+  // clicking on a work item: the current section scales down and the respective work panel slides up
     $workItems.on( 'click', function( event ) {
 
       // scale down main section
-      $sectionWork.addClass( 'block-scale-down' );
+      $sectionProject.addClass( 'block-scale-down' );
+
 
       // show panel for this work item
       $workPanelsContainer.addClass( 'block-panel-items-show' );
@@ -83,7 +93,8 @@ var Boxlayout = (function() {
 
     } );
 
-    // navigating the work items: current work panel scales down and the next work panel slides up
+
+  // navigating the work items: current work panel scales down and the next work panel slides up
     $nextWorkItem.on( 'click', function( event ) {
 
       if( isAnimating ) {
@@ -112,11 +123,13 @@ var Boxlayout = (function() {
 
     } );
 
-    // clicking the work panels close button: the current work panel slides down and the section scales up again
+
+  // clicking the work panels close button: the current work panel slides down and the section scales up again
     $closeWorkItem.on( 'click', function( event ) {
 
       // scale up main section
-      $sectionWork.removeClass( 'block-scale-down' );
+      $sectionProject.removeClass( 'block-scale-down' );
+
       $workPanelsContainer.removeClass( 'block-panel-items-show' );
       $workPanels.eq( currentWorkPanel ).removeClass( 'block-show-work' );
       
