@@ -15,6 +15,7 @@ body, html {
   margin: 0; 
   height: 100%;
 }
+
 /*border-box forces the padding and borders into the width and height instead of expanding it. *=universal selectors*/
 *,
 *:after,
@@ -72,6 +73,7 @@ a:hover {
 .block-main > section:first-child {
   top: 0;
   left: 0;
+
   background: #C4C16B;
   /*yellow*/
 }
@@ -81,6 +83,7 @@ a:hover {
   left: 50%;
  background: #4F5C5B;
  /*grey*/
+
 }
 
 .block-main > section:nth-child(3) {
@@ -147,7 +150,6 @@ a:hover {
 }
 
 
-
 .block-on-top {
   position: relative;
   width: 100%;
@@ -163,6 +165,7 @@ a:hover {
   display: -webkit-flex;
   display: flex;
 
+
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
@@ -171,6 +174,7 @@ a:hover {
   -webkit-flex-wrap: wrap;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
+
 
 
   /*aligns flex items along the main axis of the current line of the flex container*/
@@ -188,6 +192,7 @@ a:hover {
   align-items: center;
 
 }
+
 
 
 /*stuff on top header and icons*/
@@ -250,7 +255,9 @@ a:hover {
 }
 
 .block-icon-close:before {
+
   content: "╳";
+
 }
 
 .block-content, 
@@ -501,4 +508,4 @@ section.block-expand .block-icon-close {
 	.block-content > ul li {
 		width: 40%;
 	}
-}
+
