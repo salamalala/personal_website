@@ -59,20 +59,18 @@
   z-index: 100;
 }
 
-.block-main > section:first-child.block-expand {
-  background: #EE4444;
-}
+
 .block-main > section:nth-child(2).block-expand {
-  background: #3BBCAD;
-    /*blue*/
+  background: #4F5C5B;
+    /*grey*/
    
 }
 .block-main > section:nth-child(3).block-expand {
- background: #DDBE68;
-   /*yellow*/
+ background: #3BBC95;
+   /*turk*/
 }
 .block-main > section:nth-child(4).block-expand {
- background: #22B573;
+ background: #DB7D55;
    /*green*/
 }
 

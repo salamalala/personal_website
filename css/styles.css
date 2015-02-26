@@ -42,12 +42,10 @@ h1{
 }
 
 a {
-  color: #f0f0f0;
+  color: #f2ede3; 
+  /*offwhite*/
   text-decoration: none;
   letter-spacing: 2px;
-  padding: 0 5px;
-  text-transform: uppercase;
-  font-size: 80%;
 }
 
 a:hover {
@@ -75,30 +73,38 @@ a:hover {
 .block-main > section:first-child {
   top: 0;
   left: 0;
-  background: #DB694D; 
-  /*orange*/
+
+  background: #C4C16B;
+  /*yellow*/
+
 }
 
 .block-main > section:nth-child(2) {
   top: 0;
   left: 50%;
-  background: #3BBCAD;
-  /*blue*/
+
+ background: #4F5C5B;
+ /*grey*/
 
 }
 
 .block-main > section:nth-child(3) {
   top: 50%;
   left: 0;
-  background: #DDBE68;
-  /*yellow*/
+
+  background: #3BBC95;
+  /*blue*/
+
+
+
 }
 
 .block-main > section:nth-child(4) {
   top: 50%;
   left: 50%;
-  background: #22B573;
-  /*green*/
+
+  background: #DB7D55;
+  /*orange*/
 
 }
 
@@ -144,8 +150,8 @@ a:hover {
 }
 
 .bounce-in{
-  -webkit-animation: bounceInDown 0.7s both cubic-bezier(.63,.09,.75,.46); 
-  animation-duration: bounceInDown 0.7s both cubic-bezier(.63,.09,.75,.46); 
+  -webkit-animation: bounceInDown 0.8s both cubic-bezier(.63,.09,.75,.46) 0.5s; 
+  animation-duration: bounceInDown 0.8s both cubic-bezier(.63,.09,.75,.46)0.5s; 
 }
 
 .block-on-top {
@@ -211,6 +217,8 @@ a:hover {
   font-size: 1.8em;
 }
 
+
+
 .block-icon {
   text-align: center;
   speak: none;
@@ -228,6 +236,8 @@ a:hover {
   content: "\e001";
   font-family: 'icomoon';
   speak: none;
+  transform: rotate(20deg);
+  margin-bottom: 30px;
 }
 
 .block-icon-about:before {
