@@ -9,11 +9,14 @@
  font-style: normal;
 }
 
+
+
 body, html { 
   font-size: 100%; 
   padding: 0; 
   margin: 0; 
   height: 100%;
+  position: relative;
 }
 
 /*border-box forces the padding and borders into the width and height instead of expanding it. *=universal selectors*/
@@ -32,8 +35,8 @@ body {
   color: #f2ede3; 
   /*offwhite*/
   background: #333;
-  font-size: 0.9em;
-  line-height: 1.3;
+  line-height: 1.5;
+  letter-spacing: 1px;
 }
 
 h1{
@@ -45,7 +48,14 @@ a {
   color: #f2ede3; 
   /*offwhite*/
   text-decoration: none;
-  letter-spacing: 2px;
+}
+
+footer{
+  font-family: "futura-pt",sans-serif;
+  text-align: center;
+  font-size: 0.8em;
+  font-weight: 400;
+  position: absolute;
 }
 
 a:hover {
@@ -84,7 +94,6 @@ a:hover {
   left: 50%;
  background: #4F5C5B;
  /*grey*/
-
 }
 
 .block-main > section:nth-child(3) {
@@ -301,13 +310,13 @@ div.block-panel-items > div > div {
 }
 
 
-/*styling all the links*/
-
+/*projects*/
 
 .block-content > ul {
   list-style: none;
   padding: 0;
-  margin: 0;
+  margin: 0 0 5% 0;
+
 } 
 
 .block-work-items{
@@ -319,52 +328,67 @@ div.block-panel-items > div > div {
   display: flex;
   -webkit-flex-wrap: wrap;
   flex-wrap: wrap;
+  -webkit-justify-content: space-between;
+  -moz-justify-content: space-between;
+  -ms-justify-content: space-between;
+  -o-justify-content: space-between;
+  justify-content: space-between;
+}
 
+.block-work-items li {
+  margin: 5% 0 0 0 ;
+  max-width: 30%;
+}
+
+.block-work-items h3{
+  text-transform: uppercase;
+  font-size: 1em;
+  letter-spacing: 2px;
+  text-align: center;
+}
+
+.block-work-items > ul li img a {
+  font-size: 1.1em;
+  padding: 5%;
 }
 
 
-.block-work-items li {
-  margin: 5% 5% 0 0 ;
+.block-content .img_portfolio {
+  max-width: 100%;
+  -webkit-filter: grayscale(60%);
+  -o-filter: grayscale(60%);
+  filter: grayscale(60%);
 
-  max-width: 20%;
-  background-color: #657574;
+}
+
+.block-content > ul li img:hover {
   -webkit-filter: none;
   -o-filter: none;
   filter: none;
+  }
 
-}
-
-
-.block-work-items img a {
-  font-size: 1.1em;
-  padding: 5%;
-
-}
-
-
-.block-content > ul li a:hover {
-  -webkit-filter: grayscale(90%);
-  -o-filter: grayscale(90%);
-  filter: grayscale(90%);
-
-}
-
-.block-content > ul li a img {
-  max-width: 100%;
-}
 
 .text-work{
-  margin: 6% 4%;
-  overflow: hidden;
+  font-family: "futura-pt",sans-serif;
+  font-weight: 400;
+  letter-spacing: 1.7;
+  text-align: center;
 }
+
+/*profile page*/
 
 .nina_pic{
-  background-image: url("../images/nina_ga_silly.jpg");
-  background-color: purple;
-  width: 500px;
+  background: url("../images/nina_ga.jpg") no-repeat center center;
+  height: 250px;
+  width: 250px;
+  border-radius: 100%;
 }
 
-
+.nina_pic:hover{
+background: url("../images/nina_ga_silly.jpg") no-repeat center center;
+border-radius: 0;
+-webkit-transition: border-radius 0.2s ease-in;
+}
 
 
 /* Transition classes and properties */
@@ -431,7 +455,8 @@ div.block-panel-items > div > div {
 
 
 .block-main > section:nth-child(2).block-expand {
-  background: #4F5C5B;
+/*  background: #4F5C5B;*/
+  background-color: #657574;
     /*grey*/
    
 }
@@ -512,4 +537,9 @@ section.block-expand .block-icon-close {
 	.block-content > ul li {
 		width: 40%;
 	}
+
+  .block-work-items li {
+    margin: 5% 0 0 0 ;
+    max-width: 50%;
+  }
 
