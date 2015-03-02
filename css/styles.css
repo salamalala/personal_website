@@ -452,11 +452,27 @@ border-radius: 0;
 
    .contact-items > li {
     margin: 5% 0 0 0 ;
-    min-width: 100%;
+    max-width: 45%;
   }
 
-  .nina_pic{
-    height: 220px;
-    width: 220px;
-  }
+
+  @media screen and (max-width: 30em) {
+    .first-block {
+      font-size: 40%;
+    }
+
+    .block-work-items > li {
+      margin: 5% 0 0 0 ;
+      min-width: 100%;
+    }
+
+     .contact-items > li {
+      margin: 5% 0 0 0 ;
+      min-width: 100%;
+    }
+
+    .nina_pic{
+      height: 220px;
+      width: 220px;
+    }
 
