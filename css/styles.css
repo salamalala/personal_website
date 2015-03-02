@@ -379,7 +379,7 @@ a:hover {
 .nina_pic:hover{
 background: url("../images/nina_ga_silly.jpg") no-repeat center center;
 border-radius: 0;
--webkit-transition: border-radius 0.2s ease-in;
+-webkit-transition: border-radius 0.1s ease-in-out;
 }
 
 
@@ -390,43 +390,33 @@ border-radius: 0;
 
 
 .icon-contact:before{
-  font-family: 'icomoon';
-  speak: none;
+  font-family: Flaticon;
+  font-style: normal;
   display: block;
   text-align: center;
- font-size: 8em;
+ font-size: 6em;
   font-weight: 100;
 
 }
 .icon-email:before {
-    content: "\e028";
+    content: "\e000";
  
 }
 
 .icon-twitter:before {
-    content: "\e05e";
+    content: "\e005";
+}
 
+
+
+.icon-linkedin:before {
+   content: "\e004";
 }
 
 
 .icon-github:before {
-  font-family: Flaticon;
-  font-style: normal;
-  content: "\e001";
+    content: "\e003";
 
-}
-
-
-}.flaticon-email20:before {
-  content: "\e000";
-}
-.flaticon-socialnetwork44:before {
-  
-}
-
-
-.icon-linkedin:before {
-    content: "\e062";
 }
 
 
