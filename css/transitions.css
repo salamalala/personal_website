@@ -141,22 +141,4 @@ section.block-expand .block-icon-close {
 
 
 
-@media screen and (max-width: 46.5em) {
-  .block-content,
-  .block-on-top {
-    font-size: 75%;
-  }
-
-  .block-expand .block-on-top {
-    height: 130px;
-  }
-
-  .block-content > ul li {
-    width: 40%;
-  }
-
-  .block-work-items li {
-    margin: 5% 0 0 0 ;
-    max-width: 50%;
-  }
 

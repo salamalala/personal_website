@@ -326,7 +326,8 @@ a:hover {
   justify-content: space-between;
 }
 
-.block-work-items li {
+
+.block-work-items > li {
   margin: 5% 0 0 0 ;
   max-width: 30%;
 }
@@ -383,7 +384,7 @@ border-radius: 0;
 
 
 /*contact page*/
-.icon-items{
+.contact-items{
   text-align: center;
 }
 
@@ -427,4 +428,35 @@ border-radius: 0;
 .icon-linkedin:before {
     content: "\e062";
 }
+
+
+@media screen and (max-width: 46.5em) {
+  .first-block,
+  .block-content,
+  .block-on-top {
+    font-size: 75%;
+  }
+
+  .block-expand .block-on-top {
+    height: 130px;
+  }
+
+/*  .block-content > ul li {
+    width: 40%;
+  }
+*/
+  .block-work-items > li {
+    margin: 5% 0 0 0 ;
+    max-width: 45%;
+  }
+
+   .contact-items > li {
+    margin: 5% 0 0 0 ;
+    min-width: 100%;
+  }
+
+  .nina_pic{
+    height: 220px;
+    width: 220px;
+  }
 
