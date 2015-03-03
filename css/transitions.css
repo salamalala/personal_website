@@ -3,7 +3,8 @@
 
 
 /*animation*/
-@-webkit-keyframes bounceInDown { 
+
+@-webkit-keyframes: bounceInDown { 
    0% { 
        opacity: 0; 
         -webkit-transform: translateY(-400px); 
@@ -37,7 +38,145 @@
     } 
 } 
 
-@-webkit-keyframes swingingArrow{
+@-moz-keyframes: bounceInDown { 
+   0% { 
+       opacity: 0; 
+        -webkit-transform: translateY(-400px); 
+    } 
+    40% { 
+        opacity: 1; 
+        -webkit-transform: translateY(30px); 
+    } 
+    50% { 
+        -webkit-transform: translateY(-20px); 
+    } 
+      
+    60% { 
+        -webkit-transform: translateY(10px); 
+    } 
+
+    70% { 
+        -webkit-transform: translateY(-10px); 
+    } 
+
+    80% { 
+        -webkit-transform: translateY(5px); 
+    } 
+
+    90% { 
+        -webkit-transform: translateY(-5px); 
+    } 
+
+    100% { 
+        -webkit-transform: translateY(0); 
+    } 
+} 
+
+@-ms-keyframes: bounceInDown { 
+   0% { 
+       opacity: 0; 
+        -webkit-transform: translateY(-400px); 
+    } 
+    40% { 
+        opacity: 1; 
+        -webkit-transform: translateY(30px); 
+    } 
+    50% { 
+        -webkit-transform: translateY(-20px); 
+    } 
+      
+    60% { 
+        -webkit-transform: translateY(10px); 
+    } 
+
+    70% { 
+        -webkit-transform: translateY(-10px); 
+    } 
+
+    80% { 
+        -webkit-transform: translateY(5px); 
+    } 
+
+    90% { 
+        -webkit-transform: translateY(-5px); 
+    } 
+
+    100% { 
+        -webkit-transform: translateY(0); 
+    } 
+} 
+
+@-o-keyframes: bounceInDown { 
+   0% { 
+       opacity: 0; 
+        -webkit-transform: translateY(-400px); 
+    } 
+    40% { 
+        opacity: 1; 
+        -webkit-transform: translateY(30px); 
+    } 
+    50% { 
+        -webkit-transform: translateY(-20px); 
+    } 
+      
+    60% { 
+        -webkit-transform: translateY(10px); 
+    } 
+
+    70% { 
+        -webkit-transform: translateY(-10px); 
+    } 
+
+    80% { 
+        -webkit-transform: translateY(5px); 
+    } 
+
+    90% { 
+        -webkit-transform: translateY(-5px); 
+    } 
+
+    100% { 
+        -webkit-transform: translateY(0); 
+    } 
+} 
+
+@keyframes: bounceInDown { 
+   0% { 
+       opacity: 0; 
+        -webkit-transform: translateY(-400px); 
+    } 
+    40% { 
+        opacity: 1; 
+        -webkit-transform: translateY(30px); 
+    } 
+    50% { 
+        -webkit-transform: translateY(-20px); 
+    } 
+      
+    60% { 
+        -webkit-transform: translateY(10px); 
+    } 
+
+    70% { 
+        -webkit-transform: translateY(-10px); 
+    } 
+
+    80% { 
+        -webkit-transform: translateY(5px); 
+    } 
+
+    90% { 
+        -webkit-transform: translateY(-5px); 
+    } 
+
+    100% { 
+        -webkit-transform: translateY(0); 
+    } 
+} 
+
+
+
+-webkit-keyframes: swingingArrow{
   0% {
     -webkit-transform: translateY(-2px);
   }
@@ -46,8 +185,42 @@
     -webkit-transform: translateY(2px);
   }
 }
+-moz-keyframes: swingingArrow{
+  0% {
+    -webkit-transform: translateY(-2px);
+  }
 
+  100% {
+    -webkit-transform: translateY(2px);
+  }
+}
+-ms-keyframes: swingingArrow{
+  0% {
+    -webkit-transform: translateY(-2px);
+  }
 
+  100% {
+    -webkit-transform: translateY(2px);
+  }
+}
+-o-keyframes: swingingArrow{
+  0% {
+    -webkit-transform: translateY(-2px);
+  }
+
+  100% {
+    -webkit-transform: translateY(2px);
+  }
+}
+keyframes: swingingArrow{
+  0% {
+    -webkit-transform: translateY(-2px);
+  }
+
+  100% {
+    -webkit-transform: translateY(2px);
+  }
+}
 
 /* Transition classes and properties */
 

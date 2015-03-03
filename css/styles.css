@@ -23,6 +23,7 @@ body, html {
 *,
 *:after,
 *:before {
+
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
@@ -127,21 +128,32 @@ a:hover {
 
 
   -webkit-flex-direction: column;
+  -moz-flex-direction: column;
   -ms-flex-direction: column;
+  -o-flex-direction: column;
   flex-direction: column;
+
 
   /*The flex items will wrap onto additional flex lines if there isn’t enough room for them on the first flex line.*/
   -webkit-flex-wrap: wrap;
+  -moz-flex-wrap: wrap;
   -ms-flex-wrap: wrap;
+  -o-flex-wrap: wrap;
   flex-wrap: wrap;
 
   -webkit-box-pack: center;
   -moz-box-pack: center;
+  -ms-box-pack: center;
+  box-pack: center;
+
 
   /*aligns flex items along the main axis of the current line of the flex container*/
   -webkit-justify-content: center;
-  -ms-flex-pack: center;
+  -moz-justify-content: center;
+  -ms-justify-content: center;
+  -o-justify-content: center;
   justify-content: center;
+
 
   /*aligns flex items along the cross axis of the current line of the flex container*/
 
@@ -169,27 +181,35 @@ a:hover {
   display: -webkit-box;
   display: -moz-box;
 
+
   display: -ms-flexbox;
   display: -webkit-flex;
   display: flex;
 
-
   -webkit-flex-direction: row;
+  -moz-flex-direction: row;
   -ms-flex-direction: row;
+  -o-flex-direction: row;
   flex-direction: row;
+
 
   /*The flex items will wrap onto additional flex lines if there isn’t enough room for them on the first flex line.*/
   -webkit-flex-wrap: wrap;
+  -moz-flex-wrap: wrap;
   -ms-flex-wrap: wrap;
+  -o-flex-wrap: wrap;
   flex-wrap: wrap;
+
 
 
 
   /*aligns flex items along the main axis of the current line of the flex container*/
   -webkit-justify-content: center;
   -moz-justify-content: center;
-  -ms-flex-pack: center;
+  -ms-justify-content: center;
+  -o-justify-content: center;
   justify-content: center;
+
 
   /*aligns flex items along the cross axis of the current line of the flex container, here row and therefore y axis*/
 
@@ -221,6 +241,8 @@ a:hover {
   speak: none;
   cursor: pointer;
   -webkit-font-smoothing: antialiased;
+  font-smoothing:antialiased;
+
 }
 
 .block-icon:before {
@@ -259,6 +281,8 @@ a:hover {
   opacity: 0;
   pointer-events: none;
   -webkit-animation: swingingArrow alternate-reverse ease-in-out 0.5s infinite both;
+  -o-animation: swingingArrow alternate-reverse ease-in-out 0.5s infinite both;
+  animation: swingingArrow alternate-reverse ease-in-out 0.5s infinite both;
 }
 
 /* Block Content */
@@ -311,25 +335,46 @@ a:hover {
 } 
 
 .block-work-items{
+
   display: -webkit-box;
   display: -moz-box;
   display: -ms-flexbox;
   display: -moz-flex;
   display: -webkit-flex;
   display: flex;
+
+  -webkit-flex-direction: row;
+  -moz-flex-direction: row;
+  -ms-flex-direction: row;
+  -o-flex-direction: row;
+  flex-direction: row;
+
   -webkit-flex-wrap: wrap;
+  -moz-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  -o-flex-wrap: wrap;
   flex-wrap: wrap;
+
+
   -webkit-justify-content: space-between;
   -moz-justify-content: space-between;
   -ms-justify-content: space-between;
   -o-justify-content: space-between;
   justify-content: space-between;
+
+  -webkit-box-align: center;
+  -moz-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+
+
 }
 
 
 .block-work-items > li {
-  margin: 5% 0 0 0 ;
-  max-width: 30%;
+  margin: 50px 0 0 0;
+  width: 30%;
 }
 
 .block-work-items h3{
@@ -380,6 +425,8 @@ a:hover {
 background: url("../images/nina_ga_silly.jpg") no-repeat center center;
 border-radius: 0;
 -webkit-transition: border-radius 0.1s ease-in-out;
+-o-transition:border-radius 0.1s ease-in-out;
+transition: border-radius 0.1s ease-in-out;
 }
 
 
@@ -436,13 +483,13 @@ border-radius: 0;
   }
 */
   .block-work-items > li {
-    margin: 5% 0 0 0 ;
-    max-width: 45%;
+    margin: 40px 0 0 0;
+    width: 45%;
   }
 
    .contact-items > li {
     margin: 5% 0 0 0 ;
-    max-width: 45%;
+    width: 45%;
   }
 
 
@@ -452,7 +499,7 @@ border-radius: 0;
     }
 
     .block-work-items > li {
-      margin: 5% 0 0 0 ;
+      margin: 30px 0 0 0 ;
       min-width: 100%;
     }
 
