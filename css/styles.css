@@ -55,6 +55,8 @@ a {
   text-transform: uppercase;
   letter-spacing: 5px;
   font-size: 0.8em;
+  margin-top: 1%;
+  display: block;
 }
 
 a:hover {
@@ -275,7 +277,7 @@ a:hover {
 .block-main > section .block-icon-close {
   position: absolute;
   top: 15px;
-  right: 15px;
+  left: 15px;
   cursor: pointer;
   z-index: 100;
   opacity: 0;
@@ -288,7 +290,7 @@ a:hover {
 /* Block Content */
 
 .block-icon-close:before {
-  content: "╳";
+  content: "⇠";
 }
 
 .block-content{
@@ -362,11 +364,14 @@ a:hover {
   -o-justify-content: space-between;
   justify-content: space-between;
 
-  -webkit-box-align: center;
-  -moz-box-align: center;
-  -ms-flex-align: center;
-  -webkit-align-items: center;
-  align-items: center;
+
+  /*stretch to fill the container, here, get same height everywhere. */
+  -webkit-box-align: stretch;
+  -moz-box-align: stretch;
+  -ms-flex-align: stretch;
+  -webkit-align-items: stretch;
+  align-items: stretch;
+
 
 
 }
@@ -429,10 +434,19 @@ border-radius: 0;
 transition: border-radius 0.1s ease-in-out;
 }
 
+.links-about{
+  margin-top: 2%;
+}
+
 
 /*contact page*/
 .contact-items{
   text-align: center;
+}
+
+.contact-items > li {
+  margin: 50px 0 0 0;
+  width: 25%;
 }
 
 
@@ -486,6 +500,8 @@ transition: border-radius 0.1s ease-in-out;
     margin: 40px 0 0 0;
     width: 45%;
   }
+
+
 
    .contact-items > li {
     margin: 5% 0 0 0 ;

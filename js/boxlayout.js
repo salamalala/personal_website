@@ -66,22 +66,6 @@ var Boxlayout = (function() {
 
     } );
 
-    // clicking on a work item: the current section scales down and the respective work panel slides up
-    $workItems.on( 'click', function( event ) {
-
-      // scale down main section
-      $sectionWork.addClass( 'block-scale-down' );
-
-      // show panel for this work item
-      $workPanelsContainer.addClass( 'block-panel-items-show' );
-
-      var $panel = $workPanelsContainer.find("[data-panel='" + $( this ).data( 'panel' ) + "']");
-      currentWorkPanel = $panel.index();
-      $panel.addClass( 'block-show-work' );
-
-      return false;
-
-    } );
 
     // navigating the work items: current work panel scales down and the next work panel slides up
     $nextWorkItem.on( 'click', function( event ) {

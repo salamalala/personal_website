@@ -4,7 +4,7 @@
 
 /*animation*/
 
-@-webkit-keyframes: bounceInDown { 
+@-webkit-keyframes bounceInDown { 
    0% { 
        opacity: 0; 
         -webkit-transform: translateY(-400px); 
@@ -38,7 +38,7 @@
     } 
 } 
 
-@-moz-keyframes: bounceInDown { 
+@-moz-keyframes bounceInDown { 
    0% { 
        opacity: 0; 
         -webkit-transform: translateY(-400px); 
@@ -72,7 +72,7 @@
     } 
 } 
 
-@-ms-keyframes: bounceInDown { 
+@-ms-keyframes bounceInDown { 
    0% { 
        opacity: 0; 
         -webkit-transform: translateY(-400px); 
@@ -106,7 +106,7 @@
     } 
 } 
 
-@-o-keyframes: bounceInDown { 
+@-o-keyframes bounceInDown { 
    0% { 
        opacity: 0; 
         -webkit-transform: translateY(-400px); 
@@ -140,7 +140,7 @@
     } 
 } 
 
-@keyframes: bounceInDown { 
+@keyframes bounceInDown { 
    0% { 
        opacity: 0; 
         -webkit-transform: translateY(-400px); 
@@ -176,49 +176,49 @@
 
 
 
--webkit-keyframes: swingingArrow{
+@-webkit-keyframes swingingArrow{
   0% {
-    -webkit-transform: translateY(-2px);
+    -webkit-transform: translateX(-2px);
   }
 
   100% {
-    -webkit-transform: translateY(2px);
+    -webkit-transform: translateX(2px);
   }
 }
--moz-keyframes: swingingArrow{
+@-moz-keyframes swingingArrow{
   0% {
-    -webkit-transform: translateY(-2px);
+    -webkit-transform: translateX(-2px);
   }
 
   100% {
-    -webkit-transform: translateY(2px);
+    -webkit-transform: translateX(2px);
   }
 }
--ms-keyframes: swingingArrow{
+@-ms-keyframes swingingArrow{
   0% {
-    -webkit-transform: translateY(-2px);
+    -webkit-transform: translateX(-2px);
   }
 
   100% {
-    -webkit-transform: translateY(2px);
+    -webkit-transform: translateX(2px);
   }
 }
--o-keyframes: swingingArrow{
+@-o-keyframes swingingArrow{
   0% {
-    -webkit-transform: translateY(-2px);
+    -webkit-transform: translateX(-2px);
   }
 
   100% {
-    -webkit-transform: translateY(2px);
+    -webkit-transform: translateX(2px);
   }
 }
-keyframes: swingingArrow{
+@keyframes swingingArrow{
   0% {
-    -webkit-transform: translateY(-2px);
+    -webkit-transform: translateX(-2px);
   }
 
   100% {
-    -webkit-transform: translateY(2px);
+    -webkit-transform: translateX(2px);
   }
 }
 
