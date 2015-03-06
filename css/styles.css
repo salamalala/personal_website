@@ -75,7 +75,7 @@ a:hover {
 }
 
 
-/*> child combinator, only selects the direct children, all of them position absoulute and half widht and height*/
+/*> child combinator, only s the direct children, all of them position absoulute and half widht and height*/
 .block-main > section {
   position: absolute;
   width: 50%;
@@ -287,6 +287,10 @@ a:hover {
   animation: swingingArrow alternate-reverse ease-in-out 0.5s infinite both;
 }
 
+
+
+
+
 /* Block Content */
 
 .block-icon-close:before {
@@ -461,23 +465,42 @@ transition: border-radius 0.1s ease-in-out;
 }
 .icon-email:before {
     content: "\e000";
- 
+    transform: translateY(0);
+    transition: transform 0.2s ease;
+}
+.icon-email:hover:before{
+  transform: translateY(-5px);
 }
 
 .icon-twitter:before {
     content: "\e005";
+    transform: translateY(0);
+    transition: transform 0.2s ease;
 }
 
+.icon-twitter:hover:before{
+  transform: translateY(-5px);
+}
 
 
 .icon-linkedin:before {
    content: "\e004";
+   transform: translateY(0);
+   transition: transform 0.2s ease;
 }
 
+.icon-linkedin:hover:before{
+  transform: translateY(-5px);
+}
 
 .icon-github:before {
     content: "\e003";
+    transform: translateY(0);
+    transition: transform 0.2s ease;
 
+}
+.icon-github:hover:before{
+  transform: translateY(-5px);
 }
 
 
