@@ -42,6 +42,7 @@ body {
 
 .first-block h1{
   font-size: 4em;
+  letter-spacing: 0.2px;
   margin: 0;
 }
 
@@ -169,6 +170,16 @@ a:hover {
 .bounce-in{
   -webkit-animation: bounceInDown 0.8s both cubic-bezier(.63,.09,.75,.46) 0.5s; 
   animation-duration: bounceInDown 0.8s both cubic-bezier(.63,.09,.75,.46)0.5s; 
+}
+
+.first-block h2{
+  white-space: nowrap;
+    overflow: hidden;
+    width: 100%;
+  -webkit-animation: typing 3s steps(13, end) 1s both;
+  -o-animation: typing 3s steps(13, end) 1s both;
+  animation: typing 3s steps(13, end) 1s both;
+
 }
 
 

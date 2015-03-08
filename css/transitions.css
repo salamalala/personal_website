@@ -175,6 +175,28 @@
 } 
 
 
+@-webkit-keyframes typing{
+  from{
+    width: 0;
+  }
+@-moz-keyframes typing{
+  from{
+    width: 0;
+  }
+@-ms-keyframes typing{
+  from{
+    width: 0;
+  }
+@-o-keyframes typing{
+  from{
+    width: 0;
+  }
+@keyframes typing{
+  from{
+    width: 0;
+  }
+
+
 
 @-webkit-keyframes swingingArrow{
   0% {
