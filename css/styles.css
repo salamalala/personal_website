@@ -176,9 +176,9 @@ a:hover {
   white-space: nowrap;
     overflow: hidden;
     width: 100%;
-  -webkit-animation: typing 3s steps(13, end) 1.3s both;
-  -o-animation: typing 3s steps(13, end) 1.3s both;
-  animation: typing 3s steps(13, end) 1.3s both;
+  -webkit-animation: typing 3.5s steps(13, end) 1.3s both;
+  -o-animation: typing 3.5s steps(13, end) 1.3s both;
+  animation: typing 3.5s steps(13, end) 1.3s both;
 
 }
 
