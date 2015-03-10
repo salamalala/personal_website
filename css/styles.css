@@ -515,6 +515,14 @@ transition: border-radius 0.1s ease-in-out;
 }
 
 
+@media screen and (max-width: 68.75em) {
+  .first-block,
+  .block-content,
+  .block-on-top {
+    font-size: 90%;
+  }
+}
+
 @media screen and (max-width: 46.5em) {
   .first-block,
   .block-content,
