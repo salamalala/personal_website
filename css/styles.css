@@ -556,14 +556,14 @@ transition: border-radius 0.1s ease-in-out;
       font-size: 40%;
     }
 
-    .block-work-items > li {
+    .block-work-items > li{
       margin: 30px 0 0 0 ;
-      min-width: 100%;
+      width: 100%;
     }
 
      .contact-items > li {
       margin: 5% 0 0 0 ;
-      min-width: 100%;
+      width: 100%;
     }
 
     .nina_pic{
@@ -571,3 +571,4 @@ transition: border-radius 0.1s ease-in-out;
       width: 220px;
     }
 
+}
