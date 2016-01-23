@@ -1,1 +1,1 @@
-My personal website, inspired by a codrops article. Done with HTML5, CSS3 and jQuery/JavaScript. 
+My personal website, inspired by a codrops article. Written in HTML5, Sass and jQuery/JavaScript. 

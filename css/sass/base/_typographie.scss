@@ -1,0 +1,41 @@
+body {
+  font-size: 100%; 
+  color: $main-font-color; 
+  font-style: normal;
+  font-weight: 700;
+  line-height: 1.5;
+  letter-spacing: 1px;
+}
+
+h1 {
+  font-size: 4em;
+  letter-spacing: 0.2px;
+  margin: 0;
+}
+
+h3 {
+  text-transform: uppercase;
+  font-size: 1em;
+  letter-spacing: 2px;
+  text-align: center;
+}
+
+h4 {
+  line-height: 1.8;
+}
+
+a {
+  color: $main-font-color; 
+  text-decoration: none;
+  &:hover {
+    color: $white;
+  }
+}
+
+.external-link {
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  font-size: 0.8em;
+  margin-top: 1%;
+  display: block;
+}

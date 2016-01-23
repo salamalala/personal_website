@@ -10,61 +10,58 @@
 }
 
 
-
-body, html { 
+/*body, html { 
   font-size: 100%; 
   padding: 0; 
   margin: 0; 
   height: 100%;
   position: relative;
-}
+}*/
 
 /*border-box forces the padding and borders into the width and height instead of expanding it. *=universal selectors*/
-*,
+/**,
 *:after,
 *:before {
-
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
-
-body {
-  font-family: "letter-gothic-std",sans-serif;
+*/
+/*body {
   font-style: normal;
   font-weight: 700;
   color: #f2ede3; 
-  /*offwhite*/
+  offwhite
   background: #333;
   line-height: 1.5;
   letter-spacing: 1px;
 }
+*/
 
-.first-block h1{
+/*.first-block h1{
   font-size: 4em;
   letter-spacing: 0.2px;
   margin: 0;
-}
+}*/
 
-a {
+/*a {
   color: #f2ede3; 
-  /*offwhite*/
   text-decoration: none;
-}
+}*/
 
-.ext-link{
+/*.external-link{
   text-transform: uppercase;
   letter-spacing: 5px;
   font-size: 0.8em;
   margin-top: 1%;
   display: block;
-}
+}*/
 
-a:hover {
+/*a:hover {
   color: #fff;
-}
+}*/
 
-.container { 
+/*.container { 
   height: 100%; 
 }
 
@@ -73,11 +70,11 @@ a:hover {
   width: 100%;
   height: 100%;
   overflow: hidden;
-}
+}*/
 
 
 /*> child combinator, only s the direct children, all of them position absoulute and half widht and height*/
-.block-main > section {
+/*.block-main > section {
   position: absolute;
   width: 50%;
   height: 50%;
@@ -89,7 +86,7 @@ a:hover {
 
   background: #C4C16B;
   /*yellow*/
-}
+/*}
 
 .block-main > section:nth-child(2) {
   top: 0;
@@ -98,20 +95,21 @@ a:hover {
  /*grey*/
 }
 
-.block-main > section:nth-child(3) {
+/*.block-main > section:nth-child(3) {
   top: 50%;
   left: 0;
   background: #3BBC95;
   /*blue*/
-}
+/*}
 
 .block-main > section:nth-child(4) {
   top: 50%;
   left: 50%;
   background: #DB7D55;
   /*orange*/
-}
+/*}*/
 
+/*
 .first-block {
 	text-align: center;
 	margin: 0;
@@ -122,7 +120,7 @@ a:hover {
   height: 100%;
 
   /* Centering with flexbox */
-  display: -webkit-box;
+  /*display: -webkit-box;
   display: -moz-box;
 
   display: -ms-flexbox;
@@ -135,10 +133,10 @@ a:hover {
   -ms-flex-direction: column;
   -o-flex-direction: column;
   flex-direction: column;
-
+*/
 
   /*The flex items will wrap onto additional flex lines if there isn’t enough room for them on the first flex line.*/
-  -webkit-flex-wrap: wrap;
+  /*-webkit-flex-wrap: wrap;
   -moz-flex-wrap: wrap;
   -ms-flex-wrap: wrap;
   -o-flex-wrap: wrap;
@@ -148,31 +146,31 @@ a:hover {
   -moz-box-pack: center;
   -ms-box-pack: center;
   box-pack: center;
-
+*/
 
   /*aligns flex items along the main axis of the current line of the flex container*/
-  -webkit-justify-content: center;
+ /* -webkit-justify-content: center;
   -moz-justify-content: center;
   -ms-justify-content: center;
   -o-justify-content: center;
-  justify-content: center;
+  justify-content: center;*/
 
 
   /*aligns flex items along the cross axis of the current line of the flex container*/
 
-  -webkit-box-align: center;
+ /* -webkit-box-align: center;
   -moz-box-align: center;
   -webkit-align-items: center;
   -ms-flex-align: center;
   align-items: center;
-}
+}*/
 
-.bounce-in{
+/*.bounce-in{
   -webkit-animation: bounceInDown 0.8s both cubic-bezier(.63,.09,.75,.46) 0.5s; 
   animation-duration: bounceInDown 0.8s both cubic-bezier(.63,.09,.75,.46)0.5s; 
-}
+}*/
 
-.first-block h2{
+/*.first-block h2{
   white-space: nowrap;
     overflow: hidden;
     width: 100%;
@@ -180,7 +178,7 @@ a:hover {
   -o-animation: typing 3.5s steps(13, end) 1.3s both;
   animation: typing 3.5s steps(13, end) 1.3s both;
 
-}
+}*/
 
 
 .block-on-top {
@@ -237,50 +235,7 @@ a:hover {
 
 
 /*stuff on top header and icons*/
-.block-on-top h2 {
-  text-align: center;
-  padding: 20px;
-  width: 100%;
-  letter-spacing: 2px;
-  font-style: normal;
-  font-weight: 700;
-  font-size: 1.8em;
-}
 
-
-
-.block-icon {
-  text-align: center;
-  speak: none;
-  cursor: pointer;
-  -webkit-font-smoothing: antialiased;
-  font-smoothing:antialiased;
-
-}
-
-.block-icon:before {
-  display: block;
-  font-size: 2em;
-  margin-bottom: 10px;
-}
-
-.block-icon-projects:before {
-  content: "\e001";
-  font-family: 'icomoon';
-  speak: none;
-}
-
-.block-icon-about:before {
-  content: "\e03F";
-  font-family: 'icomoon';
-  speak: none;
-}
-
-.block-icon-contact:before {
- content: "\e028";
- font-family: 'icomoon';
- speak: none;
-}
 
 
 
@@ -336,9 +291,9 @@ a:hover {
   font-size: 2.5em;
 }
 
-.block-content h4 {
+/*.block-content h4 {
   line-height: 1.8;
-}
+}*/
 
 
 
@@ -397,12 +352,12 @@ a:hover {
   width: 30%;
 }
 
-.block-work-items h3{
+/*.block-work-items h3{
   text-transform: uppercase;
   font-size: 1em;
   letter-spacing: 2px;
   text-align: center;
-}
+}*/
 
 .block-work-items > ul li img a {
   font-size: 1.1em;
@@ -521,7 +476,7 @@ transition: border-radius 0.1s ease-in-out;
 
 /*animation*/
 
-@-webkit-keyframes bounceInDown { 
+/*@-webkit-keyframes bounceInDown { 
    0% { 
        opacity: 0; 
         -webkit-transform: translateY(-400px); 
@@ -689,10 +644,10 @@ transition: border-radius 0.1s ease-in-out;
     100% { 
         -webkit-transform: translateY(0); 
     } 
-} 
+} */
 
 
-@-webkit-keyframes typing{
+/*@-webkit-keyframes typing{
   from{
     width: 0;
   }
@@ -716,11 +671,11 @@ transition: border-radius 0.1s ease-in-out;
   from{
     width: 0;
   }
-}
+}*/
 
 
 
-@-webkit-keyframes swingingArrow{
+/*@-webkit-keyframes swingingArrow{
   0% {
     -webkit-transform: translateX(-2px);
   }
@@ -764,7 +719,7 @@ transition: border-radius 0.1s ease-in-out;
   100% {
     -webkit-transform: translateX(2px);
   }
-}
+}*/
 
 
 
@@ -865,7 +820,7 @@ section.block-expand .block-icon-close {
 
 
 
-@media screen and (max-width: 68.75em) {
+/*@media screen and (max-width: 68.75em) {
   .first-block,
   .block-content,
   .block-on-top {
@@ -882,14 +837,14 @@ section.block-expand .block-icon-close {
 
   .block-expand .block-on-top {
     height: 130px;
-  }
+  }*/
 
 /*  .block-content > ul li {
     width: 40%;
   }
 */
-  .block-work-items > li {
-    margin: 40px 0 0 0;
+  /*.block-work-items > li {*/
+/*    margin: 40px 0 0 0;
     width: 45%;
   }
 
@@ -921,7 +876,7 @@ section.block-expand .block-icon-close {
       width: 220px;
     }
 
-}
+}*/
 
 
 

@@ -1,0 +1,43 @@
+.block-on-top {
+  h2 {
+    text-align: center;
+    padding: 20px;
+    width: 100%;
+    letter-spacing: 2px;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 1.8em;
+  }
+}
+
+.block-icon {
+  text-align: center;
+  speak: none;
+  cursor: pointer;
+  -webkit-font-smoothing: antialiased;
+  font-smoothing:antialiased;
+}
+
+.block-icon:before {
+  display: block;
+  font-size: 2em;
+  margin-bottom: 10px;
+}
+
+.block-icon-projects:before {
+  content: "\e001";
+  font-family: 'icomoon';
+  speak: none;
+}
+
+.block-icon-about:before {
+  content: "\e03F";
+  font-family: 'icomoon';
+  speak: none;
+}
+
+.block-icon-contact:before {
+ content: "\e028";
+ font-family: 'icomoon';
+ speak: none;
+}
