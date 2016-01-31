@@ -8,6 +8,10 @@ body {
 }
 
 h1 {
+  font-family: $heading-font;
+  font-style: normal;
+  font-weight: 400;
+  letter-spacing: 3px;
   font-size: 4em;
   letter-spacing: 0.2px;
   margin: 0;
@@ -38,4 +42,15 @@ a {
   font-size: 0.8em;
   margin-top: 1%;
   display: block;
+}
+
+.header-content {
+  font-family: $base-font;
+  font-style: normal;
+  font-weight: 400;
+  letter-spacing: 3px;
+  border-bottom: 2px solid $main-font-color;
+  padding-bottom: 10px;
+  margin: 10px 0 40px 0;
+  font-size: 2.5em;
 }

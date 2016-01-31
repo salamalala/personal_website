@@ -181,15 +181,15 @@
 }*/
 
 
-.block-on-top {
+/*.block-on-top {
   position: relative;
   width: 100%;
   height: 100%;
   opacity: 1;
   /*makes the mouse cursor look like a pointer.*/
-  cursor: pointer;
+/*  cursor: pointer;*/
   /* Centering with flexbox */
-  display: -webkit-box;
+  /*display: -webkit-box;
   display: -moz-box;
 
 
@@ -201,36 +201,36 @@
   -moz-flex-direction: row;
   -ms-flex-direction: row;
   -o-flex-direction: row;
-  flex-direction: row;
+  flex-direction: row;*/
 
 
   /*The flex items will wrap onto additional flex lines if there isn’t enough room for them on the first flex line.*/
-  -webkit-flex-wrap: wrap;
+  /*-webkit-flex-wrap: wrap;
   -moz-flex-wrap: wrap;
   -ms-flex-wrap: wrap;
   -o-flex-wrap: wrap;
   flex-wrap: wrap;
-
+*/
 
 
 
   /*aligns flex items along the main axis of the current line of the flex container*/
-  -webkit-justify-content: center;
+/*  -webkit-justify-content: center;
   -moz-justify-content: center;
   -ms-justify-content: center;
   -o-justify-content: center;
-  justify-content: center;
+  justify-content: center;*/
 
 
   /*aligns flex items along the cross axis of the current line of the flex container, here row and therefore y axis*/
 
-  -webkit-box-align: center;
+/*  -webkit-box-align: center;
   -moz-box-align: center;
   -ms-flex-align: center;
   -webkit-align-items: center;
   align-items: center;
 
-}
+}*/
 
 
 
@@ -257,9 +257,9 @@
 
 
 
-/* Block Content */
+/*/* Block Content */
 
-.block-icon-close:before {
+/*.block-icon-close:before {
   content: "⇠";
 }
 
@@ -289,7 +289,7 @@
   padding-bottom: 10px;
   margin: 10px 0 40px 0;
   font-size: 2.5em;
-}
+}*/
 
 /*.block-content h4 {
   line-height: 1.8;
@@ -727,39 +727,39 @@ transition: border-radius 0.1s ease-in-out;
 /* Transition classes and properties */
 
 
-.block-main > section {
+/*.block-main > section {
   -webkit-transition: all 0.5s ease-in-out;
   -moz-transition: all 0.5s ease-in-out;
   transition: all 0.5s ease-in-out;
 }
 
 /*gets triggered through js*/
-.block-main > section.block-expand {
+/*.block-main > section.block-expand {
   width: 100%;
   height: 100%;
   top: 0;
   left: 0;
-}
+}*/
 
-.block-main > section.block-expand-top {
+/*.block-main > section.block-expand-top {
   z-index: 100;
 }
 
 
 .block-main > section:nth-child(2).block-expand {
-/*  background: #4F5C5B;*/
-  background-color: #657574;
+  background: #4F5C5B;
+  background-color: #657574;*/
     /*grey*/
    
-}
+/*}
 .block-main > section:nth-child(3).block-expand {
- background: #3BBC95;
+ background: #3BBC95;*/
    /*turk*/
-}
+/*}
 .block-main > section:nth-child(4).block-expand {
- background: #DB7D55;
+ background: #DB7D55;*/
    /*green*/
-}
+/*}*/
 
 /*not: take all apart from the one with block expand and make them half the size*/
 .block-main.block-expand-item > section:not(.block-expand),

@@ -1,7 +1,7 @@
 /*Media queries*/
 
 
-@media screen and (max-width: 68.75em) {
+@media screen and (max-width: $big-screen) {
   .first-block,
   .block-content,
   .block-on-top {
@@ -9,7 +9,7 @@
   }
 }
 
-@media screen and (max-width: 46.5em) {
+@media screen and (max-width: $medium-screen) {
   .first-block,
   .block-content,
   .block-on-top {
@@ -32,7 +32,7 @@
 }
 
 
-@media screen and (max-width: 30em) {
+@media screen and (max-width: $small-screen) {
   .first-block {
     font-size: 40%;
   }

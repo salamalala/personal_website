@@ -1,3 +1,4 @@
+@charset "UTF-8";
 body {
   font-size: 100%;
   color: #f2ede3;
@@ -7,6 +8,10 @@ body {
   letter-spacing: 1px; }
 
 h1 {
+  font-family: "letter-gothic-std", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  letter-spacing: 3px;
   font-size: 4em;
   letter-spacing: 0.2px;
   margin: 0; }
@@ -32,6 +37,16 @@ a {
   font-size: 0.8em;
   margin-top: 1%;
   display: block; }
+
+.header-content {
+  font-family: "futura-pt", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  letter-spacing: 3px;
+  border-bottom: 2px solid #f2ede3;
+  padding-bottom: 10px;
+  margin: 10px 0 40px 0;
+  font-size: 2.5em; }
 
 /*Media queries*/
 @media screen and (max-width: 68.75em) {
@@ -138,10 +153,26 @@ a {
   width: 50%;
   height: 50%; }
 
-.block-main > section:first-child {
-  top: 0;
-  left: 0;
-  background: #C4C16B;
+.block-main > section {
+  transition: all 0.5s ease-in-out; }
+  .block-main > section:first-child {
+    top: 0;
+    left: 0;
+    background: #C4C16B; }
+  .block-main > section:nth-child(2) {
+    top: 0;
+    left: 50%;
+    background: #4F5C5B; }
+  .block-main > section:nth-child(3) {
+    top: 50%;
+    left: 0;
+    background: #3BBC95; }
+  .block-main > section:nth-child(4) {
+    top: 50%;
+    left: 50%;
+    background: #DB7D55; }
+
+.first-block-on-top {
   margin: 0;
   width: 100%;
   height: 100%;
@@ -151,28 +182,104 @@ a {
   flex-wrap: wrap;
   justify-content: center;
   align-items: center; }
-  .block-main > section:first-child .bounce-in-animation {
+  .first-block-on-top .bounce-in-animation {
     animation-duration: bounceInDown 0.8s both cubic-bezier(0.63, 0.09, 0.75, 0.46) 0.5s; }
-  .block-main > section:first-child .typing.animation {
+  .first-block-on-top .typing.animation {
     white-space: nowrap;
     overflow: hidden;
     width: 100%;
     animation: typing 3.5s steps(13, end) 1.3s both; }
 
-.block-main > section:nth-child(2) {
+.block-on-top {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  opacity: 1;
+  /*makes the mouse cursor look like a pointer.*/
+  cursor: pointer;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  transition: opacity 0.2s linear 0.5s; }
+  .block-on-top h2 {
+    transition: all 0.2s ease-in-out; }
+
+/*closing x */
+/* Block Content */
+.block-icon-close:before {
+  content: "⇠"; }
+
+.block-main > section .block-icon-close {
+  position: absolute;
+  top: 2%;
+  left: 2%;
+  cursor: pointer;
+  z-index: 100;
+  opacity: 0;
+  pointer-events: none;
+  animation: swingingArrow alternate-reverse ease-in-out 0.5s infinite both; }
+
+.block-content {
+  opacity: 0;
+  pointer-events: none;
+  position: absolute;
+  top: 12%;
+  left: 7%;
+  right: 7%;
+  bottom: 5%;
+  overflow: hidden;
+  overflow-y: auto; }
+  @media screen and (min-width: 46.5em) {
+    .block-content {
+      left: 5%;
+      right: 5%; } }
+
+/*gets triggered through js*/
+.block-main > section.block-expand {
+  width: 100%;
+  height: 100%;
   top: 0;
-  left: 50%;
-  background: #4F5C5B; }
+  left: 0; }
+  .block-main > section.block-expand.top {
+    z-index: 100; }
 
-.block-main > section:nth-child(3) {
-  top: 50%;
-  left: 0;
-  background: #3BBC95; }
+.block-main > section:nth-child(2).block-expand {
+  /*  background: #4F5C5B;*/
+  background-color: #657574;
+  /*grey*/ }
 
-.block-main > section:nth-child(4) {
-  top: 50%;
-  left: 50%;
-  background: #DB7D55; }
+.block-main > section:nth-child(3).block-expand {
+  background: #3BBC95;
+  /*turk*/ }
+
+.block-main > section:nth-child(4).block-expand {
+  background: #DB7D55;
+  /*green*/ }
+
+/*not: take all apart from the one with block expand and make them half the size*/
+.block-main.block-expand-item > section:not(.block-expand),
+.block-main.block-expand-item > section.block-scale-down {
+  transform: scale(0.5);
+  opacity: 0; }
+
+section.block-expand .block-on-top {
+  opacity: 0;
+  transition: opacity 0s linear; }
+
+.no-touch section:not(.block-expand) .block-on-top:hover h2 {
+  transform: translateY(-15px); }
+
+.block-content,
+.block-icon-close {
+  transition: opacity 0.1s linear 0s; }
+
+section.block-expand .block-content,
+section.block-expand .block-icon-close {
+  pointer-events: auto;
+  opacity: 1;
+  transition: opacity 0.3s linear 0.5s; }
 
 *,
 *:after,

@@ -1,9 +1,9 @@
 var Boxlayout = (function() {
 
   var $element = $( '#block-main' ),
+  
   $sections = $element.children( 'section:not(:first)' ),
    
-    
     transEndEventNames = {
       'WebkitTransition' : 'webkitTransitionEnd',
       'MozTransition' : 'transitionend',
@@ -26,8 +26,8 @@ var Boxlayout = (function() {
 
         var $section = $( this );
 
-      // expand the clicked section and scale down the others
-      $section.on( 'click', function() {
+        // expand the clicked section and scale down the others
+        $section.on( 'click', function() {
 
         if( !$section.data( 'open' ) ) {
           $section.data( 'open', true ).addClass( 'block-expand block-expand-top' );
