@@ -1,5 +1,8 @@
 todo: 
 
+change layout (css shapes)
+make it work without js
+
 add sanspapier site
 remove computer images
 make images bigger
@@ -7,6 +10,7 @@ change colors / gradients?
 add autoprefixer as grunt task
 noun project icons
 add gitignore
-change text 
+change text / update resume
 add form
 zweisprachig
+
