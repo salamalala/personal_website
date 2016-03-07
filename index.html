@@ -1,171 +1,23 @@
-<!DOCTYPE html>
-<html lang="en">
+---
+layout: default
+---
 
-<head>
-	<meta charset="UTF-8">
-	<title>Nina Regli - Web Development</title>
-	<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
-	<meta name="description" content="Nina Regli's Personal Website " />
-	<link rel="stylesheet" type="text/css" href="css/transitions.css" />
-	<link rel="stylesheet" type="text/css" href="css/flaticon.css"> 
-	<link rel="stylesheet" type="text/css" href="css/main.css"> 
-	<script src="js/modernizr.custom.js"></script>
-<!-- 	<script src="//use.typekit.net/tya0ddp.js"></script> -->
-	<script>try{Typekit.load();}catch(e){}</script>
-</head>
+<div class="home">
 
-<body>		
+  <h1 class="page-heading">Posts</h1>
 
-	<div class="container">	
-		
-		<div id="block-main" class="block-main">
+  <ul class="post-list">
+    {% for post in site.posts %}
+      <li>
+        <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
 
-			<section>
+        <h2>
+          <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+        </h2>
+      </li>
+    {% endfor %}
+  </ul>
 
-				<div class="first-block-on-top">
-					<h1 class="bounce-in-animation">Nina Regli</h1>
-					<h2 class="typing-animation"> Web Developer</h2>
-				</div>
+  <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
 
-			</section>
-
-			<section id="block-project-section">
-
-				<div class="block-on-top">
-					<h2 class="block-icon block-icon-projects">Projects</h2>
-				</div>
-
-				<div class="block-content">
-					<h1 class="header-content">My Projects</h1>
-					<h4>Here are some of my projects I've worked on over the last year:</h4>
-
-					<ul class="block-work-items">
-					
-						<li>
-							<a target="_blank" href="http://sanspapiersbern.ch/">
-								<img  class="img_portfolio" src="images/sanspapier.jpg" alt="Beratungsstelle für Sans Papiers Bern">
-								<h3 class="text-work">Beratungsstelle für Sans Papiers</h3>
-								<p class="text-work">
-									A custom responsive WordPress template for a charity providing a counselling service for immigrants without papers in Bern, Switzerland. The page is build with a modular content system and uses Bourbon. 
-								</p>
-							</a>
-						</li>
-
-						<li>
-							<a target="_blank" href="http://ahoymate.herokuapp.com/">
-								<img  class="img_portfolio" src="images/ahoymate.jpg" alt="Ahoy Mate App">
-								<h3 class="text-work">Ahoy Mate</h3>
-								<p class="text-work">
-									My final project at General Assembly: a sailing app. (Rails ∣ Haml ∣ Sass ∣ jQuery ∣ Ajax ∣ Google Maps API ∣ Open Weather API ∣ Bourbon Neat). 
-								</p>
-							</a>
-						</li>
-
-						<li>
-							<a target="_blank" href="http://bvinel.github.io/hacky-memory/">
-								<img class="img_portfolio" src="images/memory_game.jpg" alt="Hacky Memory Game">
-								<h3 class="text-work">Hacky Memory</h3>
-								<p class="text-work">
-									A 24 hours fun hackathon project at General Assembly, a card game to match catchphrases with the photo of the speaker, with a “Making Of” showreel (HTML ∣ CSS3 ∣ AngularJS)
-								</p>
-							</a>
-						</li>
-
-						<li>
-							<a target="_blank" href="http://second-chef.herokuapp.com/">
-								<img class="img_portfolio" src="images/secondchef.jpg" alt="Second Chef">
-								<h3 class="text-work">Second Chef</h3>
-								<p class="text-work">A weeks project at General Assembly in a team of three (Rails ∣ Haml ∣ Sass ∣ Javascript ∣ jQuery ∣ Google Maps API ∣ Ajax/Bourbon Neat).</p>
-							</a>
-						</li>
-
-						<li>
-							<a target="_blank" href="http://www.annick-emmenegger.ch">
-								<img class="img_portfolio" src="images/annick_emmenegger.jpg" alt="Annick Emmenegger Brunner">
-								<h3 class="text-work">Annick Emmenegger Brunner</h3>
-								<p class="text-work">A responsive bilingual single-page website for a great lawyer in Bern, Switzerland (HTML5 ∣ CSS3 ∣ jQuery)
-								</p>
-							</a>
-						</li>
-
-						<li>
-							<a target="_blank" href="http://www.erlebnis-bio-hof.ch/">
-								<img class="img_portfolio" src="images/lepeugirard.jpg" alt="Le Peu Girard">
-								<h3 class="text-work">Le Peu Girard</h3>
-								<p class="text-work">
-									A responsive bilingual website for a beautiful organic farm in french Switzerland (HTML5 ∣ CSS3 ∣ jQuery)
-								</p>
-							</a>
-						</li>
-						
-					</ul>
-
-				</div>
-
-				<span class="block-icon block-icon-close"></span>
-
-			</section>
-
-			<section>
-
-				<div class="block-on-top">
-					<h2 class="block-icon block-icon-about">About me</h2>
-				</div>
-
-				<div class="block-content">
-					<div class="nina_pic"></div>
-					<h1 class="header-content">Hi there</h1>
-					<p>
-						I'm a web developer from Switzerland based in London and the Netherlands and a graduate of the Web Development Immersive Course at General Assembly in London. 
-						I'm happy working with following languages and tools: HTML5/Haml, CSS3/Sass, JavaScript/jQuery, SQL, PostgreSQL, AJAX, Heroku, AWS and Github. But the most important thing I've learnt about web development is that coding is a never ending learning experience. 
-					</p>
-
-					<p>
-						I work as a freelancer and take on jobs so please get in touch if you have a project in mind I could help you with!
-					</p>
-
-					<div class="links-about">
-						<a class="external-link" href="resume_ninaregli.pdf" target="_blank">Download my resume as pdf here</a>
-					</div>
-
-				</div>
-
-				<span class="block-icon block-icon-close"></span>
-
-			</section>
-
-			<section>
-
-				<div class="block-on-top">
-					<h2 class="block-icon block-icon-contact">Contact</h2>
-				</div>
-
-				<div class="block-content">
-					<h1 class="header-content">I would ❤ to hear from you, so please get in touch!</h1>
-						<ul class="block-work-items contact-items">
-							<li><a class="icon-contact icon-email" href="&#x6d;&#97;&#105;&#x6c;&#x74;&#111;&#x3a;&#104;&#101;&#108;&#108;&#x6f;&#64;&#x6e;&#x69;&#110;&#97;&#114;&#101;&#103;&#108;&#105;&#46;&#x63;&#x68;">&#x68;&#x65;&#108;&#x6c;&#x6f;&#x40;&#x6e;&#x69;&#x6e;&#97;&#x72;&#101;&#x67;&#x6c;&#x69;&#46;&#x63;&#x68;</a>
-							</li>
-							<li><a class="icon-contact icon-twitter" target="_blank" href="https://twitter.com/NinaRegli">@NinaRegli</a></li>
-
-							<li><a  class="icon-contact icon-linkedin" target="_blank" href="https://www.linkedin.com/in/ninaregli">linkedin.com/in/ninaregli</a></li>
-							<li><a class="icon-contact icon-github" target="_blank" href="https://github.com/salamalala">github.com/salamalala</a></li>
-						</ul>
-					</div>
-					<span class="block-icon block-icon-close"></span>
-
-				</section>
-
-			</div> <!-- end of block main -->
-
-		</div> <!-- end of container -->
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-		<script src="js/boxlayout.js"></script>
-			<script>
-			$(function() {
-				Boxlayout.init();
-				console.log("hello");
-			});
-			</script>
-			
-	</body>
-</html>
+</div>
