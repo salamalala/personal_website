@@ -48,17 +48,34 @@ module.exports = function (grunt) {
             }
         },
 
+        // add autoprefixer after css has been created
+        postcss: {
+            options: {
+              map: true, // inline sourcemaps
+
+              processors: [
+                require('pixrem')(), // add fallbacks for rem units
+                require('autoprefixer')({browsers: 'last 2 versions'}), // add vendor prefixes
+                require('cssnano')() // minify the result
+              ]
+            },
+            dist: {
+              src: '_site/css/*.css'
+            }
+        },
+
         // run tasks in parallel
         concurrent: {
             serve: [
                 'sass',
                 'watch',
-                'shell:jekyllServe'
+                'shell:jekyllServe', 
+                'postcss'
             ],
             options: {
                 logConcurrentOutput: true
             }
-        },
+        }
 
     });
 
