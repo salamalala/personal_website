@@ -24,7 +24,7 @@ module.exports = function (grunt) {
         watch: {
             sass: {
                 files: ['_sass/**/*.{scss,sass}'],
-                tasks: ['sass']
+                tasks: ['sass'],
             }
         },
 
@@ -69,8 +69,7 @@ module.exports = function (grunt) {
             serve: [
                 'sass',
                 'watch',
-                'shell:jekyllServe', 
-                'postcss'
+                'shell:jekyllServe'
             ],
             options: {
                 logConcurrentOutput: true
@@ -87,7 +86,8 @@ module.exports = function (grunt) {
     // Register the grunt build task
     grunt.registerTask('build', [
         'shell:jekyllBuild',
-        'sass'
+        'sass',
+        'postcss'
     ]);
 
     // Register build as the default task fallback

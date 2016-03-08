@@ -1,0 +1,19 @@
+.site-header {
+  background-color: $orange-background;
+
+  &--content {
+    @include outer-container;
+    padding-top: $large-spacing;
+    padding-bottom: $xlarge-spacing;
+  }
+
+  &--title {
+    display: inline-block;
+    margin-right: $base-spacing;
+  }
+
+  &--subtitle {
+    display: inline-block;
+  }
+}
+

@@ -1,14 +1,11 @@
 body {
-  font-size: 100%; 
   color: $main-font-color; 
-  font-style: normal;
-  font-weight: 700;
-  line-height: 1.5;
-  letter-spacing: 1px;
+  font-family: $base-font;
 }
 
-h1 {
-  font-family: $heading-font;
+h1, 
+h2 {
+  font-family: $secondary-font;
   font-style: normal;
   font-weight: 400;
   letter-spacing: 3px;
@@ -17,15 +14,32 @@ h1 {
   margin: 0;
 }
 
+h1 {
+  font-size: 4.209em
+}
+
+h2 {
+  font-size: 2.369em
+}
+
 h3 {
   text-transform: uppercase;
-  font-size: 1em;
+  font-size: 1.777em;
   letter-spacing: 2px;
   text-align: center;
 }
 
 h4 {
   line-height: 1.8;
+  font-size: 1.333em;
+}
+
+p {
+  font-size: 1em;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 1.5;
+  letter-spacing: 1px;
 }
 
 a {
@@ -42,15 +56,4 @@ a {
   font-size: 0.8em;
   margin-top: 1%;
   display: block;
-}
-
-.header-content {
-  font-family: $base-font;
-  font-style: normal;
-  font-weight: 400;
-  letter-spacing: 3px;
-  border-bottom: 2px solid $main-font-color;
-  padding-bottom: 10px;
-  margin: 10px 0 40px 0;
-  font-size: 2.5em;
 }

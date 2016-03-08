@@ -10,7 +10,9 @@ $visual-grid-opacity: 0.1;
 @import   "base/variables";
 @import   "base/typographie";
 @import   "base/syntax-highlighting";
+@import   "base/animations";
 
-@import   "partials/sections";
 @import   "partials/main";
+@import   "partials/site-header";
+@import   "partials/sections";
 

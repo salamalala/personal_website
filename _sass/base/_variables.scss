@@ -1,5 +1,6 @@
-$heading-font: "letter-gothic-std", sans-serif;
+// Fonts
 $base-font: "futura-pt", sans-serif;
+$secondary-font: "letter-gothic-std", sans-serif;
 
 // Colors
 $main-font-color: #f2ede3;
@@ -9,6 +10,13 @@ $yellow-background: #C4C16B;
 $grey-background: #4F5C5B;
 $turquois-background: #3BBC95;
 $orange-background: #DB7D55;
+
+//sizes - using the perfect fourth
+$small-spacing: 0.75em;
+$base-spacing: 1em;
+$medium-spacing: 1.777em;
+$large-spacing: 2.369em;
+$xlarge-spacing: 4.209em;
 
 // Media Screen breakpoints
 $big-screen: 68.75em;
