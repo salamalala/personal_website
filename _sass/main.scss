@@ -1,3 +1,12 @@
+@import "../bower_components/bourbon/app/assets/stylesheets/bourbon";
+$visual-grid: true;
+$visual-grid-color: yellow;
+$visual-grid-index: front;
+$visual-grid-opacity: 0.4;
+
+
+@import "../bower_components/neat/app/assets/stylesheets/neat";
+
 @import   "base/variables";
 @import   "base/typographie";
 @import   "base/syntax-highlighting";
