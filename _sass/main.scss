@@ -8,11 +8,14 @@ $visual-grid-opacity: 0.1;
 @import "../bower_components/neat/app/assets/stylesheets/neat";
 
 @import   "base/variables";
+@import   "base/mixins";
 @import   "base/typographie";
 @import   "base/syntax-highlighting";
 @import   "base/animations";
 
+@import   "utility/vertical-text";
+
 @import   "partials/main";
 @import   "partials/site-header";
-@import   "partials/sections";
+@import   "partials/section-home";
 

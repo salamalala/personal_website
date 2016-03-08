@@ -1,0 +1,29 @@
+.work {
+  background-color: $grey-background;
+}
+
+.about-me {
+  background-color: $yellow-background; 
+}
+
+.contact {
+  background-color: $turquois-background; 
+}
+
+
+.section {
+  &--container {
+    @include outer-container;  
+  } 
+
+  &--title {
+    @include span-columns(2);
+    @include shift(1); 
+    margin-top: 30%;
+  }
+
+  &--content {
+    @include span-columns(6);
+  }
+}
+
