@@ -20,4 +20,4 @@ markdown: kramdown
 
 
 exclude: ['node_modules', 'css', '_scss']
-keep_files: ['_site/css']
+keep_files: ['_site/css', '_site/js']

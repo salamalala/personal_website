@@ -24,7 +24,12 @@ module.exports = function (grunt) {
         watch: {
             sass: {
                 files: ['_sass/**/*.{scss,sass}'],
-                tasks: ['sass'],
+                tasks: ['sass', 'uglify']
+
+            },
+            js: {
+              files: ['_js/*.js'],
+              tasks:['uglify']
             }
         },
 
@@ -64,11 +69,20 @@ module.exports = function (grunt) {
             }
         },
 
+        uglify: {
+            dist: {
+                files: {
+                  '_site/js/main-min.js': '_js/*.js'
+                }      
+            }
+        },
+
         // run tasks in parallel
         concurrent: {
             serve: [
                 'sass',
                 'watch',
+                'uglify',
                 'shell:jekyllServe'
             ],
             options: {
@@ -87,7 +101,8 @@ module.exports = function (grunt) {
     grunt.registerTask('build', [
         'shell:jekyllBuild',
         'sass',
-        'postcss'
+        'postcss',
+        'uglify'
     ]);
 
     // Register build as the default task fallback
