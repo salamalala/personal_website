@@ -1,9 +1,5 @@
-.about-me {
-  background-color: $yellow-background; 
-}
-
 .contact {
-  background-color: $turquois-background; 
+  background-color: $turquois; 
 }
 
 
@@ -21,7 +17,7 @@
 
   &--content {
     @include span-columns(10);
-    @include shift(2);
+    @include shift(1);
   }
 }
 

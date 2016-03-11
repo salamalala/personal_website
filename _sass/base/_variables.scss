@@ -8,16 +8,23 @@ $white: #fff;
 
 $yellow-background: #C4C16B;
 $grey-background: #4F5C5B;
-$turquois-background: #3BBC95;
-$orange-background: #DB7D55;
+$turquois: #3BBC95;
+$orange: #DB7D55;
+
+$dark-blue: #253254;
+
+
+$modular-scale-base: 1.1em;
 
 //sizes - using the perfect fourth
-$small-spacing: 0.75em;
-$base-spacing: 1em;
-$medium-spacing: 1.777em;
-$large-spacing: 2.369em;
-$xlarge-spacing: 4.209em;
-$xxlarge-spacing: 7.478em;
+$small-spacing: modular-scale(-1);
+$base-spacing: $modular-scale-base;
+$medium-spacing: modular-scale(2);
+$large-spacing: modular-scale(3);
+$xlarge-spacing: modular-scale(4);
+$xxlarge-spacing: modular-scale(5);
+
+$base-font-size: 1.1em;
 
 // Media Screen breakpoints
 $big-screen: 68.75em;
