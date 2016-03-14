@@ -1,0 +1,102 @@
+.work {
+  position: relative;
+  height: 1000px;
+  width: 100%;
+  padding-top: 100px;
+  background-color: $grey;
+
+  &:before {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: $grey;
+    transform-origin: bottom left;
+    transform: skewY(5deg);
+  }
+
+  &--title {
+    background-color: $dark-blue;
+    top: -200px;
+  }
+
+  &--items {
+    position: relative;
+    z-index: 2;
+    list-style-type: none;
+    padding-left: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: stretch;
+
+    li:first-of-type {
+      background: url(../images/sanspapier_500.jpg) no-repeat;
+      background-size: contain;
+      background-position: center;
+      width: 44%;
+      height: 300px;
+    }
+
+    li:nth-of-type(2) {
+      background: url(../images/mateapp_500.jpg) no-repeat;
+      background-size: contain;
+      background-position: center;
+      width: 44%;
+      height: 300px;
+    }
+
+
+    li:nth-of-type(3) {
+      background: url(../images/second-chef_500.jpg) no-repeat;
+      background-size: contain;
+      background-position: center;
+    }
+
+    li:nth-of-type(4) {
+      background: url(../images/emmenegger_500.jpg) no-repeat;
+      background-size: contain;
+      background-position: center;
+    }
+
+    li:nth-of-type(5) {
+      background: url(../images/peu_girard_500.jpg) no-repeat;
+      background-size: contain;
+      background-position: center;
+    }
+
+  }
+
+  &--item {
+    width: 30%;
+    height: 200px;
+    margin: $small-spacing;
+    position: relative;
+
+    &:hover {
+      background-color: rgba(0, 0, 0, .6);
+      display: block;
+    }
+  }
+
+  &--caption {
+    display: none;
+    position: absolute; 
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+
+    &:hover {
+      display: visible;
+    }
+  }
+
+}
+
+
+
+

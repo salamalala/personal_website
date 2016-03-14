@@ -1,0 +1,30 @@
+.site-footer {
+  @include outer-container;
+  padding: $large-spacing 0;
+
+
+  &--description {
+    @include span-columns(8);
+    color: $offwhite;
+
+  }
+
+  &--contacts {
+    @include span-columns(4);
+    list-style-type: none;
+    padding: 0;
+
+    a {
+      color: $orange;  
+    }
+  }
+
+
+  .icon {
+    display: inline-block;
+    height: 20px;
+    width: 20px;
+    margin-right: 10px;
+  }
+}
+

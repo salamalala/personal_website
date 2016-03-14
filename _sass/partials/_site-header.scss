@@ -1,19 +1,35 @@
 .site-header {
   position: relative;
+  height: 80vh;
+  width: 100%;
+  background: $turquois;
 
   &:before {
     content: '';
     display: block;
     position: absolute;
+    top: 0;
     left: 0;
-    bottom: -100px;
-    z-index: 1;
-    height: 800px;
-    height: 100vh;
+    height: 100%;
     width: 100%;
+    z-index: 1;
     background-color: $turquois;
+    transform-origin: bottom right;
     transform: skewY(-5deg);
   }
+
+  &--language {
+    position: relative;
+    display: inline-block;
+    width: 100px;
+    padding: $xsmall-spacing $small-spacing;
+    z-index: 2;
+    text-align: center;
+    font-weight: 700;
+    background-color: $yellow;
+  }
+
+
 
   &--content {
     @include outer-container;
@@ -25,13 +41,27 @@
 
   &--title a{
     display: block;
+    margin-top: 150px;
+    margin-top: 15vh;
     text-align: center;
     color: $dark-blue;
   }
 
   &--subtitle {
-    text-align: center;
+    margin: 0 auto;
     color: $orange;
+    position: relative;
+
+    &:after {
+      content: '';
+      position: absolute;
+      width: 90%;
+      height: 2px;
+      left: 10%;
+      bottom: 0;
+      background-color: $dark-blue;
+      animation: line-fade-in 0.5s linear 1.3s;
+    }
   }
 }
 

@@ -10,14 +10,15 @@
     position: relative;
   } 
 
-  &--title {
-    position: absolute;
-    top: 45%;
-  }
-
   &--content {
     @include span-columns(10);
     @include shift(1);
+  }
+
+  &--title {
+    display: inline-block;
+    color: $offwhite;
+    padding: $xsmall-spacing $small-spacing;
   }
 }
 
