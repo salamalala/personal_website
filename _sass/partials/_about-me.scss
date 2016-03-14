@@ -3,6 +3,8 @@
   height: 650px;
   width: 100%;
   background-color: $yellow; 
+  position: relative;
+  z-index: 1;
 
   &:before {
     content: '';
@@ -19,6 +21,7 @@
 
   &--title {
     background-color: $turquois;
+    top: 20px;
   }
 
 
