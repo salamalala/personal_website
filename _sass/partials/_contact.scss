@@ -1,5 +1,27 @@
 .contact {
+  position: relative;
+  height: 400px;
+  width: 100%;
+  background-color: $turquois; 
+  position: relative;
+  z-index: 1;
+  
+  &:before {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0; 
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: $turquois;
+    transform-origin: top right;
+    transform: skewY(3deg);
+  }
+
+
   &--title {
     background-color: $grey;
+    top: -100px
   }
 }

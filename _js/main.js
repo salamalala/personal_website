@@ -26,13 +26,54 @@ $(function() {
   
   // Create the Scene and trigger when visible
   var scene2 = new ScrollMagic.Scene({
-    triggerElement: '#about-me--title', 
+    triggerElement: '#about-me', 
     duration: "150%" 
   })
   // .setTween(tween)
   .setPin("#about-me--title" , {pushFollowers: false})
   .setTween(tween2)
   .addTo(scrollMagicController);
+
+  
+  // Create the Scene and trigger when visible
+  var scene3 = new ScrollMagic.Scene({
+    triggerElement: '#contact', 
+    duration: "150%" 
+  })
+  // .setTween(tween)
+  .setPin("#contact--title" , {pushFollowers: false})
+  .addTo(scrollMagicController);
+
+
+  $('#ajax-form').submit(function(e){
+    e.preventDefault();
+
+    var formData = {
+      'name' : $('input[name=name]').val(),
+      'email' : $('input[name=email]').val(),
+      'message' : $('input[name=message]').val()
+    };
+
+    $.ajax({
+      dataType: 'jsonp',
+      url: "https://getsimpleform.com/messages/ajax?form_api_token=1e539777a5c88e415ab6cf772123e7c5",
+      data: formData
+    })
+
+    // using the done promise callback
+      .done(function(data) {
+
+        // log data to the console so we can see
+        console.log(data, "hello done"); 
+
+          // here we will handle errors and validation messages
+      }).fail(function(data) {
+
+        // show any errors
+        // best to remove for production
+        console.log(data , "hello fail");
+    });
+            
+  });
   
 });
-

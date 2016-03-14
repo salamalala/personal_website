@@ -87,16 +87,26 @@ layout: default
 
 </section>
 
-<section class="section contact">
+<section class="section contact" id="contact">
 
   <div class="section--container">
-    <h3 class="section--title contact--title vertical-text">Contact</h3>
+    <h3 class="section--title contact--title vertical-text" id="contact--title">Contact</h3>
 
 
     <div class="section--content">
 
       <h3>I would ❤ to hear from you, so please get in touch!</h3>
-    <!--  -->
+
+      <form action="https://getsimpleform.com/messages?form_api_token=1e539777a5c88e415ab6cf772123e7c5" method="post" id="ajax-form">
+        <!-- the redirect_to is optional, the form will redirect to the referrer on submission -->
+      <!--   <input type='hidden' name='redirect_to' value='<the complete return url e.g. http://fooey.com/thank-you.html>' /> -->
+
+        <input type="text" name="name" placeholder="Your Name">
+        <input type="email" name="email" placeholder="Your Email">
+        <input type="text" name="message" placeholder="Your Message">
+
+        <input type='submit' value='Send'>
+      </form>
 
     </div>    
 

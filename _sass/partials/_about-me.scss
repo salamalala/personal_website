@@ -1,23 +1,7 @@
 .about-me {
-  position: relative;
-  height: 650px;
-  width: 100%;
-  background-color: $yellow; 
+  background-color: $yellow;
   position: relative;
   z-index: 1;
-
-  &:before {
-    content: '';
-    display: block;
-    position: absolute;
-    top: 0; 
-    left: 0;
-    height: 100%;
-    width: 100%;
-    background-color: $yellow;
-    transform-origin: bottom right;
-    transform: skewY(-3deg);
-  }
 
   &--title {
     background-color: $turquois;
