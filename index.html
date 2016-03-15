@@ -95,17 +95,32 @@ layout: default
 
     <div class="section--content">
 
-      <h3>I would ❤ to hear from you, so please get in touch!</h3>
+      <h2 class="contact--header">I would ❤ to hear from you, so please get in touch!</h2>
 
       <form action="https://getsimpleform.com/messages?form_api_token=1e539777a5c88e415ab6cf772123e7c5" method="post" id="ajax-form">
-        <!-- the redirect_to is optional, the form will redirect to the referrer on submission -->
-      <!--   <input type='hidden' name='redirect_to' value='<the complete return url e.g. http://fooey.com/thank-you.html>' /> -->
 
-        <input type="text" name="name" placeholder="Your Name">
-        <input type="email" name="email" placeholder="Your Email">
-        <input type="text" name="message" placeholder="Your Message">
+        <span class="input">
+          <input class="input--field" type="text" id="input-name" />
+          <label class="input--label" for="input-name" data-content="Your name">
+            <span class="input--label-content">Your name</span>
+          </label>
+        </span>
+      
+        <span class="input">
+          <input class="input--field" type="email" id="input-email" />
+          <label class="input--label" for="input-email" data-content="Your email">
+            <span class="input--label-content">Your email</span>
+          </label>
+        </span>
 
-        <input type='submit' value='Send'>
+        <span class="input">
+          <input class="input--field" type="textarea" id="input-message" />
+          <label class="input--label" for="input-message" data-content="Your message">
+            <span class="input--label-content">Your message</span>
+          </label>
+        </span>
+
+        <input class="input input--submit" type='submit' value='Send'>
       </form>
 
     </div>    

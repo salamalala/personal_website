@@ -45,6 +45,9 @@ $(function() {
   .addTo(scrollMagicController);
 
 
+
+  //contact form 
+
   $('#ajax-form').submit(function(e){
     e.preventDefault();
 
@@ -62,18 +65,13 @@ $(function() {
 
     // using the done promise callback
       .done(function(data) {
-
-        // log data to the console so we can see
         console.log(data, "hello done"); 
-
-          // here we will handle errors and validation messages
       }).fail(function(data) {
-
         // show any errors
-        // best to remove for production
         console.log(data , "hello fail");
     });
             
   });
+
   
 });

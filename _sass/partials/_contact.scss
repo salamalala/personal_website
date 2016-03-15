@@ -1,6 +1,6 @@
 .contact {
   position: relative;
-  height: 400px;
+  height: 800px;
   width: 100%;
   background-color: $turquois; 
   position: relative;
@@ -24,4 +24,129 @@
     background-color: $grey;
     top: -100px
   }
+
+  &--header {
+    color: $orange;
+    text-align: center;
+  }
+
+  .input {
+    @include span-columns(6 of 10);
+    @include shift(2);
+    position: relative;
+    z-index: 1;
+    display: inline-block;
+    margin-top: 1em;
+    vertical-align: top;
+
+    &--field {
+      position: relative;
+      display: block;
+      float: right;
+      border: none;
+      border-radius: 0;
+      -webkit-appearance: none; /* for box shadows to show on iOS */
+      padding: 0.75em 0.1em 0.25em;
+      width: 100%;
+      background: transparent;
+      color: $offwhite;
+      &:focus {
+        outline: none;  
+      }
+    }
+
+    &--label {
+      display: inline-block;
+      float: right;
+      font-weight: bold;
+      font-size: 70.25%;
+      -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+      -webkit-touch-callout: none;
+      user-select: none;
+      position: relative;
+      overflow: hidden;
+      padding: 0;
+      width: 100%;
+      color: $dark-blue;
+      text-align: left;
+
+      &:before {
+        content: '';
+        position: absolute;
+        top: 0;
+        width: 100%;
+        height: 7px;
+        background: $dark-blue;
+        transform: scale3d(1, 0.4, 1);
+        transform-origin: 50% 100%;
+        transition: transform 0.3s, background-color 0.3s;
+        transition-timing-function: cubic-bezier(0.2, 1, 0.3, 1);
+      }
+
+      &:after {
+        content: attr(data-content);
+        position: absolute;
+        top: 0;
+        left: 0;
+        padding: 0.75em 0.15em;
+        color: $orange;
+        opacity: 0;
+        transform: translate3d(0, 50%, 0);
+        transition: opacity 0.3s, transform 0.3s;
+        transition-timing-function: cubic-bezier(0.2, 1, 0.3, 1);
+        pointer-events: none;
+      }
+    }
+
+    &--submit {
+      padding: $base-spacing;
+      background-color: $dark-blue;
+      color: $offwhite;
+      border: none;
+      transition: background-color 0.5s ease-out;
+      &:hover {
+        background-color: $orange;
+      }
+    }
+  }
+
+
+  .input--label-content {
+    position: relative;
+    display: block;
+    padding: 1.6em 0;
+    width: 100%;
+  }
+
+
+  .input--field:focus + .input--label::before {
+    background-color: $orange;
+    transform: scale3d(1, 1, 1);
+  }
+
+  .input--field:focus + .input--label {
+    pointer-events: none;
+  }
+
+  .input--field:focus + .input--label::after {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+
+  .input--label-content {
+    padding: 0.75em 0.15em;
+    transition: opacity 0.3s, transform 0.3s;
+    transition-timing-function: cubic-bezier(0.2, 1, 0.3, 1);
+  }
+
+  .input--field:focus + .input--label .input--label-content {
+    opacity: 0;
+    transform: translate3d(0, -50%, 0);
+  }
+
+  input:-webkit-autofill {
+      -webkit-box-shadow: 0 0 0px 1000px white inset;
+  }
+
 }
