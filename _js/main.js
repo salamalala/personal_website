@@ -4,45 +4,114 @@ $(function() {
   var scrollMagicController = new ScrollMagic.Controller();
   
   // Create Animation for 0.5s
-  var tween1 = TweenMax.to('#work--title', 3, {
+  var tweenWorkTitle = TweenMax.to('#work--title', 3, {
     backgroundColor: 'rgb(51, 188, 154)',
     delay: 2.99
   });
   
   // Create the Scene and trigger when visible
-  var scene1 = new ScrollMagic.Scene({
+  var sceneWork = new ScrollMagic.Scene({
     triggerElement: '#work', 
     duration: "150%" 
   })
   // .setTween(tween)
   .setPin("#work--title" , {pushFollowers: false})
-  .setTween(tween1)
+  .setTween(tweenWorkTitle)
+  .addIndicators()
   .addTo(scrollMagicController);
 
   // Create Animation for 0.5s
-  var tween2 = TweenMax.to('#about-me--title', 2, {
+  var tweenAboutMeTitle = TweenMax.to('#about-me--title', 2, {
     backgroundColor: 'rgb(101, 117, 116)'
   });
   
   // Create the Scene and trigger when visible
-  var scene2 = new ScrollMagic.Scene({
+  var sceneAboutMe = new ScrollMagic.Scene({
     triggerElement: '#about-me', 
     duration: "150%" 
   })
   // .setTween(tween)
   .setPin("#about-me--title" , {pushFollowers: false})
-  .setTween(tween2)
+  .setTween(tweenAboutMeTitle)
+  .addIndicators()
   .addTo(scrollMagicController);
 
   
   // Create the Scene and trigger when visible
-  var scene3 = new ScrollMagic.Scene({
+  var sceneContact = new ScrollMagic.Scene({
     triggerElement: '#contact', 
     duration: "150%" 
   })
   // .setTween(tween)
   .setPin("#contact--title" , {pushFollowers: false})
-  .addTo(scrollMagicController);
+  .addTo(scrollMagicController)
+  .addIndicators();
+
+
+
+  var scenes = {
+    'scene1': {
+      'work': 'anchor-work'
+    },
+    'scene2': {
+      'about-me': 'anchor-about-me'
+    },
+    'scene3': {
+      'contact': 'anchor-contact'
+    }
+  }
+
+  for(var key in scenes) {
+    // skip loop if the property is from prototype
+    if (!scenes.hasOwnProperty(key)) continue;
+
+    var obj = scenes[key];
+
+    for (var prop in obj) {
+      // skip loop if the property is from prototype
+      if(!obj.hasOwnProperty(prop)) continue;
+
+      new ScrollMagic.Scene({ 
+        triggerElement: '#' + prop 
+      })
+      .setClassToggle('#' + obj[prop], 'active')
+      .addTo(controller);
+    }
+  }
+
+
+
+  // Change behavior of controller
+  // to animate scroll instead of jump
+  scrollMagicController.scrollTo(function(target) {
+
+    TweenMax.to(window, 0.5, {
+      scrollTo : {
+        y : target, // scroll position of the target along y axis
+        autoKill : true // allows user to kill scroll action smoothly
+      },
+      ease : Cubic.easeInOut
+    });
+
+  });
+
+
+  $('.top-nav--list').on("click", "a[href^=#]", function(e) {
+    var id = $(this).attr("href"); // grab the href attribute value
+
+    if($(id).length > 0) {
+      // prevents default behavior of links.
+      e.preventDefault();
+
+      // trigger scroll
+      scrollMagicController.scrollTo(id);
+
+      // If supported by the browser we can also update the URL
+       if (window.history && window.history.pushState) {
+         history.pushState("", document.title, id);
+       }
+    }
+  });
 
 
 
