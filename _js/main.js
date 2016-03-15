@@ -15,7 +15,7 @@ $(function() {
     duration: "150%" 
   })
   // .setTween(tween)
-  .setPin("#work--title" , {pushFollowers: false})
+  .setPin("#work__title" , {pushFollowers: false})
   .setTween(tweenWorkTitle)
   .addIndicators()
   .addTo(scrollMagicController);
@@ -75,7 +75,7 @@ $(function() {
         triggerElement: '#' + prop 
       })
       .setClassToggle('#' + obj[prop], 'active')
-      .addTo(controller);
+      .addTo(scrollMagicController);
     }
   }
 
