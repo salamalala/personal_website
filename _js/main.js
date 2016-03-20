@@ -4,7 +4,7 @@ $(function() {
   var scrollMagicController = new ScrollMagic.Controller();
   
   // Create Animation for 0.5s
-  var tweenWorkTitle = TweenMax.to('#work--title', 3, {
+  var tweenWorkTitle = TweenMax.to('#work__title', 3, {
     backgroundColor: 'rgb(51, 188, 154)',
     delay: 2.99
   });
@@ -12,7 +12,7 @@ $(function() {
   // Create the Scene and trigger when visible
   var sceneWork = new ScrollMagic.Scene({
     triggerElement: '#work', 
-    duration: "150%" 
+    duration: "210%" 
   })
   // .setTween(tween)
   .setPin("#work__title" , {pushFollowers: false})
@@ -28,7 +28,7 @@ $(function() {
   // Create the Scene and trigger when visible
   var sceneAboutMe = new ScrollMagic.Scene({
     triggerElement: '#about-me', 
-    duration: "150%" 
+    duration: "100%" 
   })
   // .setTween(tween)
   .setPin("#about-me--title" , {pushFollowers: false})
@@ -40,7 +40,7 @@ $(function() {
   // Create the Scene and trigger when visible
   var sceneContact = new ScrollMagic.Scene({
     triggerElement: '#contact', 
-    duration: "150%" 
+    duration: "100%" 
   })
   // .setTween(tween)
   .setPin("#contact--title" , {pushFollowers: false})

@@ -1,8 +1,9 @@
 .site-header {
   position: relative;
-  height: 80vh;
+  height: 70vh;
   width: 100%;
-  background: $turquois;
+  background-color: $turquois;
+
 
   &:before {
     content: '';
@@ -18,8 +19,8 @@
     transform: skewY(-5deg);
   }
 
-  &--language {
-    position: relative;
+  &__language {
+    position: fixed;
     display: inline-block;
     width: 100px;
     padding: $xsmall-spacing $small-spacing;
@@ -31,7 +32,7 @@
 
 
 
-  &--content {
+  &__content {
     @include outer-container;
     position: relative;
     z-index: 3;
@@ -39,7 +40,7 @@
     padding-bottom: $xlarge-spacing;
   }
 
-  &--title a{
+  &__title a{
     display: block;
     margin-top: 150px;
     margin-top: 10vh;
@@ -47,21 +48,38 @@
     color: $dark-blue;
   }
 
-  &--subtitle {
-    margin: 0 auto;
+  &__subtitle {
+    // margin: 0 auto;
     color: $orange;
-    position: relative;
+    position: absolute;
+    bottom: 0;
+    left: 45%;
+    opacity: 0;
+    overflow: hidden;
+    white-space: nowrap;
+    font-size: 3em;
 
-    &:after {
-      content: '';
-      position: absolute;
-      width: 90%;
-      height: 2px;
-      left: 10%;
-      bottom: 0;
-      background-color: $dark-blue;
-      animation: line-fade-in 0.5s linear 1.3s;
-    }
+    // &:after {
+    //   content: '';
+    //   position: absolute;
+    //   width: 90%;
+    //   height: 2px;
+    //   left: 10%;
+    //   bottom: 0;
+    //   background-color: $dark-blue;
+    //   animation: line-fade-in 3s linear 1s;
+    // }
+  }
+  
+  // span {
+  //   animation-duration: 4s;
+  // }
+
+  span:nth-child(2) {
+    animation-delay: 5s;
+  }
+  span:nth-child(3) {
+    animation-delay: 10s;
   }
 }
 
