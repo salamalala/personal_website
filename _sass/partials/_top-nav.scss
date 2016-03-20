@@ -1,7 +1,6 @@
 .top-nav {
   @include outer-container;
-  position: fixed;
-  right: 0;
+  position: relative;
   z-index: 10;
 
 

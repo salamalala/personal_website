@@ -12,12 +12,11 @@
 
   &--content {
     @include span-columns(10);
-    @include shift(2);
+    @include shift(1);
   }
 
   &--title {
     display: inline-block;
-    @include shift(1);
     color: $offwhite;
     padding: $xsmall-spacing $small-spacing;
   }

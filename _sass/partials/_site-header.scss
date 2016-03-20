@@ -1,9 +1,8 @@
 .site-header {
   position: relative;
-  height: 70vh;
+  height: 80vh;
   width: 100%;
-  background-color: $turquois;
-
+  background: $turquois;
 
   &:before {
     content: '';
@@ -19,8 +18,8 @@
     transform: skewY(-5deg);
   }
 
-  &__language {
-    position: fixed;
+  &--language {
+    position: relative;
     display: inline-block;
     width: 100px;
     padding: $xsmall-spacing $small-spacing;
@@ -32,7 +31,7 @@
 
 
 
-  &__content {
+  &--content {
     @include outer-container;
     position: relative;
     z-index: 3;
@@ -40,7 +39,7 @@
     padding-bottom: $xlarge-spacing;
   }
 
-  &__title a{
+  &--title a{
     display: block;
     margin-top: 150px;
     margin-top: 10vh;
@@ -48,6 +47,7 @@
     color: $dark-blue;
   }
 
+<<<<<<< HEAD
   &__subtitle {
     position: absolute; 
     left: -50%;
@@ -68,5 +68,23 @@
     // }
   }
 
+=======
+  &--subtitle {
+    margin: 0 auto;
+    color: $orange;
+    position: relative;
+
+    &:after {
+      content: '';
+      position: absolute;
+      width: 90%;
+      height: 2px;
+      left: 10%;
+      bottom: 0;
+      background-color: $dark-blue;
+      animation: line-fade-in 0.5s linear 1.3s;
+    }
+  }
+>>>>>>> parent of dcbadc0... feat(header): replacing subtitle with css animation
 }
 
