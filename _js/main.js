@@ -114,30 +114,6 @@ $(function() {
   });
 
 
-  //replace text in header
-
-  var subtitle = $("#site-header__subtitle"),
-      tl = new TimelineMax({
-        //before first animation starts
-        delay: 2,
-        repeat: 6, 
-        repeatDelay: 4});
-
- tl.to(subtitle, 5, {autoAlpha: 1, left: '30%'}, "+=0.5")
-    .set(subtitle, {
-      text:"a web designer", 
-      autoAlpha: 0, 
-      right: 0})
-    .fromTo(subtitle, 1, {autoAlpha: 0, right: '-50%'}, {autoAlpha: 1, right: '30%', immediateRender: false})
-   
-    .to(subtitle, 5, {autoAlpha: 1 }, "+=2")
-    .set(subtitle, {text:"a wanna be sailor",
-      autoAlpha: 0})
-    .fromTo(subtitle, 1, {autoAlpha: 0 }, {autoAlpha: 1, immediateRender: false})
-
-  
-
-
 
   //contact form 
 

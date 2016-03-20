@@ -49,12 +49,15 @@
 
 <<<<<<< HEAD
   &__subtitle {
-    position: absolute; 
-    left: -50%;
+    // margin: 0 auto;
     color: $orange;
+    position: absolute;
+    bottom: 0;
+    left: 45%;
     opacity: 0;
-
-  
+    overflow: hidden;
+    white-space: nowrap;
+    font-size: 3em;
 
     // &:after {
     //   content: '';
@@ -67,7 +70,12 @@
     //   animation: line-fade-in 3s linear 1s;
     // }
   }
+  
+  // span {
+  //   animation-duration: 4s;
+  // }
 
+<<<<<<< HEAD
 =======
   &--subtitle {
     margin: 0 auto;
@@ -86,5 +94,13 @@
     }
   }
 >>>>>>> parent of dcbadc0... feat(header): replacing subtitle with css animation
+=======
+  span:nth-child(2) {
+    animation-delay: 5s;
+  }
+  span:nth-child(3) {
+    animation-delay: 10s;
+  }
+>>>>>>> parent of f2dcc87... feat(header): use greensock for rotating header
 }
 
