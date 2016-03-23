@@ -1,17 +1,24 @@
-@keyframes typing{
-  from {
-    width: 0;
-  }
-}
-
-@keyframes blink-caret { 
-  50% { 
-    border-color: transparent; 
-  } 
-}
-
 @keyframes line-fade-in {
-  width: 0;
+  0% { 
+    opacity: 1; 
+    animation-timing-function: ease-out; 
+    width: 0px; 
+    }
+  10% { 
+    opacity: 1; 
+    width: 100px; 
+    }
+  30% { 
+    opacity: 1; 
+    width: 100px; 
+    }
+  45% { 
+    opacity: 0; 
+    width: 100px; 
+    }
+  100% { 
+    opacity: 0; 
+    }
 }
 
 
@@ -25,11 +32,11 @@
     opacity: 1; 
     width: 0px; 
   }
-  20% { 
+  30% { 
     opacity: 1; 
     width: 100%; 
   }
-  50% { 
+  45% { 
     opacity: 0; 
     width: 100%; 
   }
@@ -39,18 +46,9 @@
 }
 
 .animation {
-  
-  // &__typing {
-  //   white-space: nowrap;
-  //   overflow: hidden;
-  //   padding-right: 3px;
-  //   width: 100%;
-  //   border-right: 0.08em solid $orange;
-  //   animation: typing 5s steps(31, end) 1.3s both infinite linear, blink-caret .7s step-end infinite alternate;  
-  // }
 
   &__rotating {
-    animation: rotateWords 15s linear infinite 1s;  
+    animation: rotateWords 21s linear infinite;  
   }
   
 }

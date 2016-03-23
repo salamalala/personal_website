@@ -12,7 +12,7 @@
 
   &--content {
     @include span-columns(10);
-    @include shift(1);
+    @include shift(2);
   }
 
   &--title {

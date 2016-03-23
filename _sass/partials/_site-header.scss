@@ -19,14 +19,19 @@
   }
 
   &--language {
-    position: relative;
+    position: fixed;
+    top: 0;
+    left: 0;
     display: inline-block;
-    width: 100px;
+    width: 150px;
     padding: $xsmall-spacing $small-spacing;
     z-index: 3;
     text-align: center;
-    font-weight: 700;
+    font-family: $secondary-font;
     background-color: $yellow;
+    a {
+      color: $offwhite;  
+    }
   }
 
 
@@ -47,60 +52,45 @@
     color: $dark-blue;
   }
 
-<<<<<<< HEAD
+  &__subtitle-wrapper {
+    margin: 0 auto;
+    position: relative;
+    width: 600px;
+  }
+
   &__subtitle {
-    // margin: 0 auto;
     color: $orange;
     position: absolute;
-    bottom: 0;
-    left: 45%;
+    left: 30%;
+    top: $small-spacing;
     opacity: 0;
     overflow: hidden;
     white-space: nowrap;
-    font-size: 3em;
-
-    // &:after {
-    //   content: '';
-    //   position: absolute;
-    //   width: 90%;
-    //   height: 2px;
-    //   left: 10%;
-    //   bottom: 0;
-    //   background-color: $dark-blue;
-    //   animation: line-fade-in 3s linear 1s;
-    // }
-  }
-  
-  // span {
-  //   animation-duration: 4s;
-  // }
-
-<<<<<<< HEAD
-=======
-  &--subtitle {
-    margin: 0 auto;
-    color: $orange;
-    position: relative;
+    font-size: modular-scale(2);
 
     &:after {
       content: '';
       position: absolute;
-      width: 90%;
+      width: 250px;
       height: 2px;
-      left: 10%;
-      bottom: 0;
+      left: 40px;
+      bottom: 0px;
       background-color: $dark-blue;
-      animation: line-fade-in 0.5s linear 1.3s;
+      animation: line-fade-in 21s linear infinite;
     }
   }
->>>>>>> parent of dcbadc0... feat(header): replacing subtitle with css animation
-=======
+
   span:nth-child(2) {
-    animation-delay: 5s;
+    animation-delay: 7s;
+    &:after {
+      animation-delay: 9s;
+    }
   }
   span:nth-child(3) {
-    animation-delay: 10s;
+    animation-delay: 14s;
+    &:after {
+      animation-delay: 16s;
+    }
   }
->>>>>>> parent of f2dcc87... feat(header): use greensock for rotating header
 }
 
