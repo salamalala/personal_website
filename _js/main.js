@@ -37,7 +37,7 @@ $(function() {
     duration: $("#contact").height() + 200
   })
   // .setTween(tween)
-  .setPin("#contact--title" , {pushFollowers: false})
+  .setPin("#contact__title" , {pushFollowers: false})
   .addTo(scrollMagicController)
   .addIndicators();
 
@@ -120,6 +120,14 @@ $(function() {
   .addIndicators()
   .setTween(workItemAnimation);
 
+
+  $(".form__input").click(function(){
+    TweenMax.fromTo(this, 0.2, {scale: 0.9, opacity: 0.5, ease:Power0.easeNone}, {scale: 1, opacity:1, ease:Bounce.easeInOut});
+  });
+
+  $(".form__submit").click(function(){
+    TweenMax.fromTo(this, 0.2, {scale: 0.6, opacity: 0.5, ease:Power0.easeNone}, {scale: 1, opacity:1, ease:Bounce.easeInOut});
+  });
 
 
   //contact form 
