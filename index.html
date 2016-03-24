@@ -7,13 +7,13 @@ layout: default
 
   <div class="section--container">
 
-    <h3 class="section--title work__title vertical-text" id="work__title">Work</h3>
+    <h3 class="section--title work__title vertical-text" id="work__title">Some of my work</h3>
 
     <div class="section--content">
 
       <div class="work__items">
 
-        <figure class="work__item" id="first-work-item">
+        <figure class="work__item">
           <img class="work__img" src="images/sanspapier_1000.jpg" alt="Sanspapier Beratungsstelle Bern"/>
           <figcaption class="work__caption">
             <h2 class="work__title-item">Sanspapiers Beratungsstelle Bern</h2>
@@ -24,7 +24,7 @@ layout: default
           </figcaption>     
         </figure>
 
-        <figure class="work__item" id="second-work-item">
+        <figure class="work__item work__item--hero">
           <img class="work__img" src="images/mateapp_500.jpg" alt="Ahoy Mate app"/>
           <figcaption class="work__caption">
             <h2 class="work__title-item">Ahoy Mate</h2>
@@ -34,7 +34,7 @@ layout: default
           </figcaption>     
         </figure>
 
-        <figure class="work__item" id="third-work-item">
+        <figure class="work__item">
           <img class="work__img" src="images/second-chef_500.jpg" alt="Second Chef app"/>
           <figcaption class="work__caption">
             <h2 class="work__title-item">Second Chef</h2>
@@ -43,7 +43,7 @@ layout: default
           </figcaption>     
         </figure>
 
-        <figure class="work__item" id="fourth-work-item">
+        <figure class="work__item">
           <img class="work__img" src="images/emmenegger_500.jpg" alt="Annick Emmenegger Brunner"/>
           <figcaption class="work__caption">
             <h2 class="work__title-item">Annick Emmenegger Brunner</h2>
@@ -52,7 +52,7 @@ layout: default
           </figcaption>     
         </figure>
 
-        <figure class="work__item" id="fifth-work-item">
+        <figure class="work__item">
           <img class="work__img" src="images/peu_girard_500.jpg" alt="Leu Peu Girard"/>
           <figcaption class="work__caption">
             <h2 class="work__title-item">Le Peu Girard</h2>
@@ -73,28 +73,29 @@ layout: default
 
   <div class="section--container">
 
-    <h3 class="section--title about-me--title vertical-text" id="about-me--title">About me</h3>
+    <h3 class="section--title about-me__title vertical-text" id="about-me__title">About me</h3>
 
     <div class="section--content">
 
-      <div class="about-me--copy">
+      <div class="about-me__copy">
 
-        <h2 class="header-content">Hi there!</h2>
+        <h2>Hi there!</h2>
       
         <p>
           I'm a web developer from Switzerland based in London and the Netherlands. 
-          I'm happy working with following languages and tools: HTML5/Haml, CSS3/Sass, JavaScript/jQuery, SQL, PostgreSQL, AJAX, Heroku, AWS and Github. I recently worked a lot with WordPress, this site is build with Jekyll. But the most important thing I've learnt about web development is that coding is a never ending learning experience. 
+          I can create your custom CMS, recently I worked a lot with WordPress, this site is build with Jekyll.
+          And for the geeky ones: I'm happy working with following languages and tools: HTML5/Haml, CSS3/Sass, JavaScript/jQuery, SQL, PostgreSQL, AJAX, Heroku, AWS and Github. But the most important thing I've learnt about web development is that coding is a never ending learning experience. 
         </p>
 
         <p>
-          I work as a freelancer and take on jobs so please get in touch if you have a project in mind I could help you with!
+          I work at the moment as a freelancer and take on jobs so please get in touch if you have a project in mind I could help you with!
         </p>
 
         <a class="external-link" href="resume_ninaregli.pdf" target="_blank">Download my resume as pdf here</a>
 
       </div>
 
-      <img class="about-me--pic" src="../images/nina_portrait.jpg" alt="Nina Portrait">
+      <div class="about-me__pic"></div>
 
     </div>
 
@@ -106,37 +107,31 @@ layout: default
 <section class="section contact" id="contact">
 
   <div class="section--container">
-    <h3 class="section--title contact--title vertical-text" id="contact--title">Contact</h3>
+    <h3 class="section--title contact__title vertical-text" id="contact__title">Contact</h3>
 
 
     <div class="section--content">
 
-      <h2 class="contact--header">I would ❤ to hear from you, so please get in touch!</h2>
+      <h2 class="contact__header">I would ❤ to hear from you, so please get in touch!</h2>
 
-      <form action="https://getsimpleform.com/messages?form_api_token=1e539777a5c88e415ab6cf772123e7c5" method="post" id="ajax-form">
+      <form class="form" action="https://getsimpleform.com/messages?form_api_token=1e539777a5c88e415ab6cf772123e7c5" method="post" id="ajax-form">
 
-        <span class="input">
-          <input class="input--field" type="text" id="input-name" />
-          <label class="input--label" for="input-name" data-content="Your name">
-            <span class="input--label-content">Your name</span>
-          </label>
-        </span>
-      
-        <span class="input">
-          <input class="input--field" type="email" id="input-email" />
-          <label class="input--label" for="input-email" data-content="Your email">
-            <span class="input--label-content">Your email</span>
-          </label>
-        </span>
+        <div class="form__item">
+          <input class="form__input" name="name" type="text" id="name" required/>
+          <label class="form__label" for="name">Your name</label>
+        </div>
 
-        <span class="input">
-          <input class="input--field" type="textarea" id="input-message" />
-          <label class="input--label" for="input-message" data-content="Your message">
-            <span class="input--label-content">Your message</span>
-          </label>
-        </span>
+        <div class="form__item">
+          <input class="form__input" name="email" type="email" id="email" required/>
+          <label class="form__label" for="input-email">Your email</label>
+        </div>
 
-        <input class="input input--submit" type='submit' value='Send'>
+        <div class="form__item">
+          <textarea class="form__input" name="message" type="textarea" id="message" rows="10" required></textarea>
+          <label class="form__label" for="message">Your message</label>
+        </div>
+
+        <input class="form__submit" type='submit' value='Send'>
       </form>
 
     </div>    

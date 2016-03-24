@@ -1,13 +1,13 @@
 .work {
   position: relative;
   width: 100%;
-  padding-top: 50px;
-  padding-bottom: 50px;
+  padding-top: $xxlarge-spacing;
+  padding-bottom: $xxlarge-spacing;
   background-color: $grey;
 
   &__title {
     background-color: $orange;
-    top: -200px;
+    transform: rotate(-90deg) translateX(-100%);
   }
 
   &__item {
@@ -24,7 +24,7 @@
     }
 
     &:hover .work__img {
-      opacity: 0.3;
+      opacity: 0.2;
       transform: translate3d(0,0,0);
     }
     
@@ -47,7 +47,7 @@
     position: relative;
     display: block;
     min-height: 100%;
-    opacity: 0.98;
+    opacity: 0.99;
     max-width: none;
     width: calc(100% + 10px);
     transition: opacity 0.35s, transform 0.35s;
@@ -98,6 +98,10 @@
     opacity: 0;
     transition: opacity 0.35s, transform 0.35s;
     transform: translate3d(100%,0,0);
+
+    .work--item--hero & {
+      font-size: $base-spacing;
+    }
   }
 }
 

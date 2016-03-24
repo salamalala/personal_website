@@ -1,5 +1,4 @@
 $(function() {
-
   
   // Init ScrollMagic Controller
   var scrollMagicController = new ScrollMagic.Controller();
@@ -11,7 +10,8 @@ $(function() {
   
   var sceneWork = new ScrollMagic.Scene({
     triggerElement: '#work', 
-    duration: $("#work").height() + 300
+    duration: $("#work").height() + 200, 
+    offset: 250
   })
   
   .setPin("#work__title" , {pushFollowers: false})
@@ -20,29 +20,21 @@ $(function() {
   .addTo(scrollMagicController);
 
 
-
-
-  // Create Animation for 0.5s
-  var tweenAboutMeTitle = TweenMax.to('#about-me--title', 2, {
-    backgroundColor: 'rgb(101, 117, 116)'
-  });
-  
-  // Create the Scene and trigger when visible
+  var tweenAboutMeTitle = TweenMax.to('#about-me__title', 2, {backgroundColor: 'rgb(101, 117, 116)'});
+    
   var sceneAboutMe = new ScrollMagic.Scene({
     triggerElement: '#about-me', 
-    duration: "150%" 
+    duration: $("#about-me").height()
   })
-  // .setTween(tween)
-  .setPin("#about-me--title" , {pushFollowers: false})
+  .setPin("#about-me__title" , {pushFollowers: false})
   .setTween(tweenAboutMeTitle)
   .addIndicators()
   .addTo(scrollMagicController);
 
   
-  // Create the Scene and trigger when visible
   var sceneContact = new ScrollMagic.Scene({
     triggerElement: '#contact', 
-    duration: "150%" 
+    duration: $("#contact").height() + 200
   })
   // .setTween(tween)
   .setPin("#contact--title" , {pushFollowers: false})
@@ -118,7 +110,7 @@ $(function() {
 
   var workItemAnimation = new TimelineMax() 
   .add([
-        TweenMax.staggerFromTo(".work__item", 1, {top: 30}, {top: -30, ease: Power4.easeOut}, 0.4)
+        TweenMax.staggerFromTo(".work__item", 0.7, {top: 30}, {top: -30, ease: Power4.easeOut}, 0.2)
       ]);
 
   // Scene

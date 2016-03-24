@@ -1,19 +1,33 @@
 .about-me {
   background-color: $yellow;
+  padding-top: $xxlarge-spacing;
+  padding-bottom: $xxxlarge-spacing;
   position: relative;
   z-index: 1;
 
-  &--title {
+  &__title {
     background-color: $turquois;
-    top: 20px;
+    transform: rotate(-90deg) translateX(-100%);
   }
 
 
-  &--copy {
+  &__copy {
     @include span-columns(7 of 10);
+    text-align: right;
   }
 
-  &--pic {
+  &__pic {
     @include span-columns(3 of 10);
+    opacity: 0.7;
+    height: 0;
+    padding-bottom: calc(28.0101901008% + 75px); /* for a 4:3 aspect ratio */
+    background: url(../images/nina_sprite.jpg);
+    background-position: 0 0;
+    background-size: 200%;
+
+    &:hover {
+      background-position: 100% 0;
+
+    }
   }
 }

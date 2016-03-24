@@ -1,12 +1,6 @@
-.contact {
-  background-color: $turquois; 
-}
-
-
 .section {
   &--container {
     @include outer-container; 
-    padding: $xxlarge-spacing 0; 
     position: relative;
   } 
 

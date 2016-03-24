@@ -1,7 +1,7 @@
 .contact {
   position: relative;
-  height: 800px;
   width: 100%;
+  padding-bottom: $xxxlarge-spacing;
   background-color: $turquois; 
   position: relative;
   z-index: 1;
@@ -20,133 +20,80 @@
   }
 
 
-  &--title {
+  &__title {
     background-color: $grey;
-    top: -100px
+    transform: rotate(-90deg) translateX(-100%);
   }
 
-  &--header {
+  &__header {
+    @include span-columns(4);
     color: $orange;
     text-align: center;
   }
 
-  .input {
-    @include span-columns(6 of 10);
-    @include shift(2);
-    position: relative;
-    z-index: 1;
-    display: inline-block;
-    margin-top: 1em;
-    vertical-align: top;
+  .form {
+    @include span-columns(6);
 
-    &--field {
-      position: relative;
-      display: block;
-      float: right;
-      border: none;
-      border-radius: 0;
-      -webkit-appearance: none; /* for box shadows to show on iOS */
-      padding: 0.75em 0.1em 0.25em;
-      width: 100%;
-      background: transparent;
-      color: $offwhite;
-      &:focus {
-        outline: none;  
-      }
+    > div:not(:first-child) {
+      margin-top: $medium-spacing;
     }
 
-    &--label {
-      display: inline-block;
-      float: right;
-      font-weight: bold;
-      font-size: 70.25%;
-      -webkit-font-smoothing: antialiased;
-        -moz-osx-font-smoothing: grayscale;
-      -webkit-touch-callout: none;
-      user-select: none;
+    &__item {
       position: relative;
-      overflow: hidden;
-      padding: 0;
+    }
+
+    &__label {
+      position: absolute;
+      top: 0;
+      left: 0;
+      bottom: 0;
       width: 100%;
+      padding: 8px 12px;
       color: $dark-blue;
-      text-align: left;
-
-      &:before {
-        content: '';
-        position: absolute;
-        top: 0;
-        width: 100%;
-        height: 7px;
-        background: $dark-blue;
-        transform: scale3d(1, 0.4, 1);
-        transform-origin: 50% 100%;
-        transition: transform 0.3s, background-color 0.3s;
-        transition-timing-function: cubic-bezier(0.2, 1, 0.3, 1);
-      }
-
-      &:after {
-        content: attr(data-content);
-        position: absolute;
-        top: 0;
-        left: 0;
-        padding: 0.75em 0.15em;
-        color: $orange;
-        opacity: 0;
-        transform: translate3d(0, 50%, 0);
-        transition: opacity 0.3s, transform 0.3s;
-        transition-timing-function: cubic-bezier(0.2, 1, 0.3, 1);
-        pointer-events: none;
-      }
     }
 
-    &--submit {
+    &__input {
+      width: 100%;
+      background: none;
+      position: relative;
+      top: 0;
+      left: 0;
+      z-index: 1;
+      padding: 8px 12px;
+      outline: 0;
+      border: 3px $dark-blue solid;
+      transition: 0.2s ease-out;
+      color: $offwhite;
+
+      &:focus + .form__label {
+        top: -25px;
+        font-size: 80%;
+        padding-left: 0;
+      }
+
+      &:valid {
+        background: $turquois;
+
+        + .form__label {
+          top: -25px;
+          font-size: 80%;
+          padding-left: 0;   
+        }
+      }
+    }
+  
+    &__submit {
       padding: $base-spacing;
+      margin-top: $base-spacing;
       background-color: $dark-blue;
       color: $offwhite;
       border: none;
+      width: 100%;
       transition: background-color 0.5s ease-out;
       &:hover {
         background-color: $orange;
       }
     }
-  }
-
-
-  .input--label-content {
-    position: relative;
-    display: block;
-    padding: 1.6em 0;
-    width: 100%;
-  }
-
-
-  .input--field:focus + .input--label::before {
-    background-color: $orange;
-    transform: scale3d(1, 1, 1);
-  }
-
-  .input--field:focus + .input--label {
-    pointer-events: none;
-  }
-
-  .input--field:focus + .input--label::after {
-    opacity: 1;
-    transform: translate3d(0, 0, 0);
-  }
-
-  .input--label-content {
-    padding: 0.75em 0.15em;
-    transition: opacity 0.3s, transform 0.3s;
-    transition-timing-function: cubic-bezier(0.2, 1, 0.3, 1);
-  }
-
-  .input--field:focus + .input--label .input--label-content {
-    opacity: 0;
-    transform: translate3d(0, -50%, 0);
-  }
-
-  input:-webkit-autofill {
-      -webkit-box-shadow: 0 0 0px 1000px white inset;
   }
 
 }

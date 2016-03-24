@@ -1,6 +1,10 @@
 .site-footer {
   @include outer-container;
   padding: $large-spacing 0;
+  position: relative;
+  z-index: 5;
+  background-color: $dark-grey;
+
 
 
   &--description {

@@ -23,15 +23,12 @@
     top: 0;
     left: 0;
     display: inline-block;
-    width: 150px;
+    width: 125px;
     padding: $xsmall-spacing $small-spacing;
     z-index: 3;
     text-align: center;
     font-family: $secondary-font;
     background-color: $yellow;
-    a {
-      color: $offwhite;  
-    }
   }
 
 
@@ -66,12 +63,13 @@
     opacity: 0;
     overflow: hidden;
     white-space: nowrap;
-    font-size: modular-scale(2);
+    padding-bottom: $xxsmall-spacing;
+    font-size: modular-scale(3);
 
     &:after {
       content: '';
       position: absolute;
-      width: 250px;
+      width: 0;
       height: 2px;
       left: 40px;
       bottom: 0px;
@@ -83,13 +81,13 @@
   span:nth-child(2) {
     animation-delay: 7s;
     &:after {
-      animation-delay: 9s;
+      animation-delay: 7s;
     }
   }
   span:nth-child(3) {
     animation-delay: 14s;
     &:after {
-      animation-delay: 16s;
+      animation-delay: 14s;
     }
   }
 }

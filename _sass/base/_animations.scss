@@ -4,17 +4,17 @@
     animation-timing-function: ease-out; 
     width: 0px; 
     }
-  10% { 
+  27% { 
     opacity: 1; 
-    width: 100px; 
+    width: 0px; 
     }
   30% { 
     opacity: 1; 
-    width: 100px; 
+    width: 200px; 
     }
-  45% { 
+  35% { 
     opacity: 0; 
-    width: 100px; 
+    width: 200px; 
     }
   100% { 
     opacity: 0; 
@@ -36,7 +36,7 @@
     opacity: 1; 
     width: 100%; 
   }
-  45% { 
+  35% { 
     opacity: 0; 
     width: 100%; 
   }

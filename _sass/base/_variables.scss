@@ -7,11 +7,14 @@ $offwhite: #f2ede3;
 $white: #fff;
 
 $yellow: #C4C16B;
-$grey: #4F5C5B;
+// 4F5C5B
+$grey: #5F6968;  
 $turquois: #3BBC95;
 $orange: #DB7D55;
 
 $dark-blue: #253254;
+
+$dark-grey: #353B3A;
 
 $main-font-color: $grey;
 
@@ -19,6 +22,7 @@ $main-font-color: $grey;
 $modular-scale-base: 1.1em;
 
 //sizes - using the perfect fourth
+$xxsmall-spacing: modular-scale(-3);
 $xsmall-spacing: modular-scale(-2);
 $small-spacing: modular-scale(-1);
 $base-spacing: $modular-scale-base;
@@ -26,6 +30,7 @@ $medium-spacing: modular-scale(2);
 $large-spacing: modular-scale(3);
 $xlarge-spacing: modular-scale(4);
 $xxlarge-spacing: modular-scale(5);
+$xxxlarge-spacing: modular-scale(8);
 
 $base-font-size: 1.1em;
 
