@@ -10,11 +10,15 @@
     display: flex;
     justify-content: flex-end;
     margin: 0;
-    padding: $large-spacing 0;
+    padding: $base-spacing 0;
   }
 
   &--items {
     padding-left: $large-spacing;
+
+    a {
+      color: $offwhite;
+    }
   }
 }
 

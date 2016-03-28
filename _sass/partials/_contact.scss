@@ -21,19 +21,20 @@
 
 
   &__title {
-    background-color: $grey;
+    background-color: darken($turquois, 20%);
     transform: rotate(-90deg) translateX(-100%);
   }
 
   &__header {
-    @include span-columns(5 of 10);
-    color: $orange;
+    @include span-columns(4 of 10);
+    color: $offwhite;
     text-align: center;
-    font-size: modular-scale(5);
+    font-size: modular-scale(4);
   }
 
   .form {
     @include span-columns(4 of 10);
+    @include shift(1);
 
     > div:not(:first-child) {
       margin-top: $medium-spacing;
@@ -50,7 +51,7 @@
       bottom: 0;
       width: 100%;
       padding: 10px 20px;
-      color: $dark-blue;
+      color: $dark-turquois;
     }
 
     &__input {
@@ -62,7 +63,7 @@
       z-index: 1;
       padding: 10px 20px;
       outline: 0;
-      border: 3px $dark-blue solid;
+      border: 3px $dark-turquois solid;
       transition: 0.2s ease-out;
       color: $offwhite;
 
@@ -86,13 +87,14 @@
     &__submit {
       padding: $base-spacing;
       margin-top: $medium-spacing;
-      background-color: $dark-blue;
+      background-color: $dark-turquois;
       color: $offwhite;
       border: none;
       width: 100%;
       transition: background-color 0.5s ease-out;
       &:hover {
-        background-color: $orange;
+        background-color: $offwhite;
+        color: $dark-turquois;
       }
     }
   }

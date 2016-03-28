@@ -1,6 +1,6 @@
 .site-header {
   position: relative;
-  height: 80vh;
+  height: 70vh;
   width: 100%;
   background: $turquois;
 
@@ -18,22 +18,24 @@
     transform: skewY(-5deg);
   }
 
-  &--language {
+  &__language {
     position: fixed;
     top: 0;
     left: 0;
     display: inline-block;
-    width: 125px;
+    width: 105px;
     padding: $xsmall-spacing $small-spacing;
     z-index: 3;
     text-align: center;
     font-family: $secondary-font;
-    background-color: $yellow;
+    font-size: modular-scale(-1);
+    background-color: $offwhite;
+    a {
+      color: $dark-grey;
+    }
   }
 
-
-
-  &--content {
+  &__content {
     @include outer-container;
     position: relative;
     z-index: 3;
@@ -41,12 +43,12 @@
     padding-bottom: $xlarge-spacing;
   }
 
-  &--title a{
+  &__title a{
     display: block;
     margin-top: 150px;
     margin-top: 10vh;
     text-align: center;
-    color: $dark-blue;
+    color: $offwhite;
   }
 
   &__subtitle-wrapper {
@@ -56,10 +58,10 @@
   }
 
   &__subtitle {
-    color: $orange;
+    color: $dark-turquois;
     position: absolute;
     left: 30%;
-    top: $small-spacing;
+    top: 0;
     opacity: 0;
     overflow: hidden;
     white-space: nowrap;
@@ -73,7 +75,7 @@
       height: 2px;
       left: 40px;
       bottom: 0px;
-      background-color: $dark-blue;
+      background-color: $offwhite;
       animation: line-fade-in 21s linear infinite;
     }
   }

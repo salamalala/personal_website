@@ -2,45 +2,36 @@ $(function() {
   
   // Init ScrollMagic Controller
   var scrollMagicController = new ScrollMagic.Controller();
-  
-  var tweenWorkTitle = TweenMax.to('#work__title', 3, {
-    backgroundColor: 'rgb(51, 188, 154)', // turquois (from orange to turqois)
-    delay: 2.9
-  });
-  
+
   var sceneWork = new ScrollMagic.Scene({
     triggerElement: '#work', 
-    duration: $("#work").height() + 200, 
+    duration: $("#work").height() - 350, 
     offset: 250
   })
   
   .setPin("#work__title" , {pushFollowers: false})
-  .setTween(tweenWorkTitle)
   .addIndicators()
   .addTo(scrollMagicController);
 
-
-  var tweenAboutMeTitle = TweenMax.to('#about-me__title', 2, {backgroundColor: 'rgb(101, 117, 116)'});
     
   var sceneAboutMe = new ScrollMagic.Scene({
     triggerElement: '#about-me', 
-    duration: $("#about-me").height()
+    duration: $("#about-me").height() - 100,
+    offset: 350
   })
+
   .setPin("#about-me__title" , {pushFollowers: false})
-  .setTween(tweenAboutMeTitle)
   .addIndicators()
   .addTo(scrollMagicController);
 
   
   var sceneContact = new ScrollMagic.Scene({
     triggerElement: '#contact', 
-    duration: $("#contact").height() + 200
+    duration: $("#contact").height()
   })
   // .setTween(tween)
   .setPin("#contact__title" , {pushFollowers: false})
   .addTo(scrollMagicController)
-  .addIndicators();
-
 
   var scenes = {
     'scene1': {
@@ -110,12 +101,12 @@ $(function() {
 
   var workItemAnimation = new TimelineMax() 
   .add([
-        TweenMax.staggerFromTo(".work__item", 0.7, {top: 30}, {top: -30, ease: Power4.easeOut}, 0.2)
+        TweenMax.staggerFromTo(".work__item", 0.7, {right: -1000}, {right: 0, ease: Power4.easeOut}, 0.35)
       ]);
 
   // Scene
   var sceneWorkItem = new ScrollMagic.Scene({
-    triggerElement: "#work", offset: 100, duration: $("#work").height()})
+    triggerElement: "#work"})
   .addTo(scrollMagicController)
   .addIndicators()
   .setTween(workItemAnimation);
@@ -157,5 +148,4 @@ $(function() {
             
   });
 
-  
 });

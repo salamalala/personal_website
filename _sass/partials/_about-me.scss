@@ -1,15 +1,19 @@
 .about-me {
   background-color: $yellow;
+  color: $dark-yellow;
   padding-top: $xxlarge-spacing;
   padding-bottom: $xxxlarge-spacing;
   position: relative;
   z-index: 1;
 
-  &__title {
-    background-color: $turquois;
-    transform: rotate(-90deg) translateX(-100%);
+  a {
+    color: $dark-yellow;
   }
 
+  &__title {
+    background-color: $dark-yellow;
+    transform: rotate(-90deg) translateX(-100%);
+  }
 
   &__copy {
     @include span-columns(7 of 10);
