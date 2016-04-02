@@ -1,33 +1,40 @@
 body {
   color: $main-font-color; 
   font-family: $base-font;
+  font-size: $base-font-size-small;
+
+  @include media($medium-screen) {
+    font-size: $base-font-size-normal;
+  }
+
+  @include media($large-screen) {
+    font-size: $base-font-size-large;
+  }
 }
 
 h1, 
 h2 {
   font-style: normal;
-  letter-spacing: 3px;
-  font-size: 4em;
   letter-spacing: 0.2px;
   margin: 0;
 }
 
 h1 {
   font-family: $secondary-font;
-  font-size: modular-scale(6);
+  font-size: $xlarge-font-size;
   font-weight: 700;
 }
 
 h2 {
   font-family: $base-font-size;
-  font-size: modular-scale(2);
+  font-size: $large-font-size;
   font-weight: 500;
 }
 
 h3 {
   font-family: $secondary-font;
   text-transform: uppercase;
-  font-size: modular-scale(1);
+  font-size: $medium-font-size;
   letter-spacing: 2px;
   margin-top: 0;
 }
@@ -38,7 +45,6 @@ h4 {
 }
 
 p {
-  font-size: $base-font-size;
   font-style: normal;
   font-weight: 500;
   line-height: 1.5;

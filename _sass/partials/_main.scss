@@ -13,3 +13,38 @@ body, html {
   background: $dark-grey;
 }
 
+.section {
+  position: relative;
+  width: 100%;
+
+  &__container {
+    @include outer-container(90%); 
+    position: relative;
+
+    @include media($large-screen) {
+      @include outer-container;
+    }
+  } 
+
+  &__content {
+    @include span-columns(10 of 12);
+    @include shift(2 of 12);
+
+    @include media($large-screen) {
+      @include span-columns(10 of 12);
+      @include shift(2 of 12);
+    }
+  }
+
+  &__title {
+    display: inline-block;
+    color: $offwhite;
+    padding: $xsmall-spacing $small-spacing;
+    transform: rotate(-90deg) translateX(-100%) translateY(50%);
+
+    @include media($large-screen) {
+      transform: rotate(-90deg) translateX(-100%) translateY(0);      
+    }
+  }
+}
+

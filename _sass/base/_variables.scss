@@ -6,7 +6,7 @@ $secondary-font: "letter-gothic-std", sans-serif;
 $offwhite: #E8E1D3;
 
 $yellow: #C4C16B;
-$dark-yellow: #76742f;
+$dark-yellow: #4e4c1f;
 
 $grey: #5F6968;  
 $dark-grey: #353B3A;
@@ -17,7 +17,17 @@ $dark-turquois: #236e57;
 
 $main-font-color: $dark-grey;
 
-$modular-scale-base: 1.1em;
+
+$base-font-size-small: 0.8em;
+$base-font-size-normal: 1em;
+$base-font-size-large: 1.1em;
+
+
+$small-font-size: modular-scale(-1);
+$base-font-size: $modular-scale-base;
+$medium-font-size: modular-scale(1);
+$large-font-size: modular-scale(2);
+$xlarge-font-size: modular-scale(6);
 
 //sizes - using the perfect fourth
 $xxsmall-spacing: modular-scale(-3);
@@ -30,9 +40,4 @@ $xlarge-spacing: modular-scale(4);
 $xxlarge-spacing: modular-scale(5);
 $xxxlarge-spacing: modular-scale(8);
 
-$base-font-size: 1.1em;
 
-// Media Screen breakpoints
-$big-screen: 68.75em;
-$medium-screen: 46.5em;
-$small-screen: 30em;

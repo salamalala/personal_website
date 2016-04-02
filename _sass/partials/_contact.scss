@@ -1,9 +1,6 @@
 .contact {
-  position: relative;
-  width: 100%;
   padding-bottom: $xxxlarge-spacing;
   background-color: $turquois; 
-  position: relative;
   z-index: 1;
   
   &:before {
@@ -19,26 +16,39 @@
     transform: skewY(3deg);
   }
 
-
   &__title {
-    background-color: darken($turquois, 20%);
-    transform: rotate(-90deg) translateX(-100%);
+    background-color: $dark-turquois;
   }
 
   &__header {
-    @include span-columns(4 of 10);
+    @include span-columns(10 of 10);
     color: $offwhite;
+    margin-top: $base-spacing;
     text-align: center;
     font-size: modular-scale(4);
+
+    @include media($medium-screen) {
+      @include span-columns(4 of 10);
+    }
   }
 
   .form {
-    @include span-columns(4 of 10);
-    @include shift(1);
-
-    > div:not(:first-child) {
+    @include span-columns(10 of 10);
+    
+    > div {
       margin-top: $medium-spacing;
     }
+
+    @include media($medium-screen) {
+      @include span-columns(5 of 10);
+      @include shift(1);  
+      
+      > div:not(:first-child) {
+        margin-top: $medium-spacing;
+      }
+    }
+
+    
 
     &__item {
       position: relative;

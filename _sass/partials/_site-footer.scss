@@ -1,23 +1,32 @@
 .site-footer {
-  @include outer-container;
+  @include outer-container(90%);
   padding: $large-spacing 0;
   position: relative;
-  z-index: 5;
   background-color: $dark-grey;
 
-
+  @include media($large-screen) {
+    @include outer-container();
+  }
 
   &--description {
-    @include span-columns(9);
+    @include span-columns(6);
     color: $offwhite;
-
+    
+    @include media($medium-screen) {
+      @include span-columns(8);
+    }
   }
 
   &--contacts {
-    @include span-columns(2);
+    @include span-columns(5);
     @include shift(1);
     list-style-type: none;
     padding: 0;
+
+    @include media($medium-screen) {
+      @include span-columns(3);
+      @include shift(1);
+    }
 
     a {
       color: $offwhite;  

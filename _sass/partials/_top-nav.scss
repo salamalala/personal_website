@@ -1,23 +1,42 @@
 .top-nav {
-  @include outer-container;
+  @include outer-container(90%);
   position: relative;
   z-index: 10;
+
+  @include media($large-screen) {
+    @include outer-container(100%);
+  }
 
 
   &--list {
     list-style-type: none;
-    padding-left: 0;
     display: flex;
     justify-content: flex-end;
     margin: 0;
-    padding: $base-spacing 0;
+    padding: $small-spacing 0;
+
+    @include media($medium-screen) {
+      padding: $base-spacing 0;
+    }
   }
 
   &--items {
-    padding-left: $large-spacing;
+    padding-left: $base-spacing;
+
+    @include media($medium-screen) {
+      padding-left: $large-spacing;
+    }
 
     a {
       color: $offwhite;
+      display: inline-block;
+      transform: translateY(0);
+      transition: all 0.2s ease-out;
+
+      &:hover {
+        color: $dark-turquois;
+        transform: translateY(-2px);
+      }
     }
   }
 }

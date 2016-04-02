@@ -1,5 +1,5 @@
 @import "../bower_components/bourbon/app/assets/stylesheets/bourbon";
-$visual-grid: false;
+$visual-grid: true;
 $visual-grid-color: yellow;
 $visual-grid-index: front;
 $visual-grid-opacity: 0.1;
@@ -7,6 +7,7 @@ $visual-grid-opacity: 0.1;
 
 @import "../bower_components/neat/app/assets/stylesheets/neat";
 
+@import   "base/grid-settings";
 @import   "base/variables";
 @import   "base/mixins";
 @import   "base/typographie";
@@ -19,7 +20,6 @@ $visual-grid-opacity: 0.1;
 @import   "partials/site-header";
 @import   "partials/site-footer";
 @import   "partials/top-nav";
-@import   "partials/section-home";
 @import   "partials/work";
 @import   "partials/about-me";
 @import   "partials/contact";

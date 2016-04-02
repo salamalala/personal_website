@@ -1,8 +1,12 @@
 .site-header {
   position: relative;
-  height: 70vh;
   width: 100%;
   background: $turquois;
+  height: 50vh;
+
+  @include media($large-screen) {
+    height: 70vh;  
+  }
 
   &:before {
     content: '';
@@ -23,44 +27,65 @@
     top: 0;
     left: 0;
     display: inline-block;
-    width: 105px;
+    width: 60px;
     padding: $xsmall-spacing $small-spacing;
     z-index: 3;
     text-align: center;
     font-family: $secondary-font;
     font-size: modular-scale(-1);
     background-color: $offwhite;
+
+    @include media($medium-screen) {
+      width: 105px;  
+    }
+
     a {
       color: $dark-grey;
     }
   }
 
   &__content {
-    @include outer-container;
+    @include outer-container(90%);
     position: relative;
     z-index: 3;
     padding-top: $large-spacing;
     padding-bottom: $xlarge-spacing;
+
+    @include media($large-screen) {
+      @include outer-container(100%);
+    }
   }
 
-  &__title a{
-    display: block;
-    margin-top: 150px;
-    margin-top: 10vh;
-    text-align: center;
-    color: $offwhite;
+  &__title {
+    margin-top: 70px;
+    margin-top: 5vh;
+
+    @include media($large-screen) {
+      margin-top: 150px;
+      margin-top: 15vh;
+    }
+
+    a {
+      display: block;
+      text-align: center;
+      color: $offwhite;
+    }
   }
 
   &__subtitle-wrapper {
     margin: 0 auto;
     position: relative;
-    width: 600px;
+    width: 300px;
+
+    @include media($medium-screen) {
+      width: 600px;  
+    }
   }
 
   &__subtitle {
     color: $dark-turquois;
     position: absolute;
-    left: 30%;
+    left: 0;
     top: 0;
     opacity: 0;
     overflow: hidden;
@@ -68,15 +93,23 @@
     padding-bottom: $xxsmall-spacing;
     font-size: modular-scale(3);
 
+    @include media($medium-screen) {
+      left: 30%;  
+    }
+
     &:after {
       content: '';
       position: absolute;
       width: 0;
       height: 2px;
-      left: 40px;
+      left: 20px;
       bottom: 0px;
       background-color: $offwhite;
       animation: line-fade-in 21s linear infinite;
+
+      @include media ($medium-screen) {
+        left: 40px;
+      }
     }
   }
 
