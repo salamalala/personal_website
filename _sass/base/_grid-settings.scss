@@ -1,0 +1,18 @@
+@import "../../bower_components/bourbon/app/assets/stylesheets/bourbon"; 
+@import "../../bower_components/neat/app/assets/stylesheets/neat-helpers"; 
+
+// Change the grid settings
+// $column: 90px;
+// $gutter: 30px;
+// $grid-columns: 10;
+// $max-width: 1200px;
+
+//ems in media queries, react to the browser font size
+$max-width: 68em;
+
+// Neat Breakpoints
+//Major breakpoints
+
+$small-screen: 30em;
+$medium-screen: 46.5em;
+$large-screen: 68.75em;
