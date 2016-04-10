@@ -1,10 +1,10 @@
 .top-nav {
   @include outer-container(90%);
   position: relative;
-  z-index: 10;
+  z-index: 3;
 
   @include media($large-screen) {
-    @include outer-container(100%);
+    @include outer-container();
   }
 
 

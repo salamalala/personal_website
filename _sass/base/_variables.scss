@@ -12,7 +12,8 @@ $grey: #5F6968;
 $dark-grey: #353B3A;
 
 $turquois: #3BBC95;
-$dark-turquois: #236e57;
+// $dark-turquois: #236e57;
+$dark-turquois: darken($turquois, 20%);
 
 
 $main-font-color: $dark-grey;

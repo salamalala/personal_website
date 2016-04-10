@@ -8,7 +8,6 @@ $(function() {
     duration: $("#work").height() - 350, 
     offset: 250
   })
-  
   .setPin("#work__title" , {pushFollowers: false})
   .addIndicators()
   .addTo(scrollMagicController);
@@ -19,7 +18,6 @@ $(function() {
     duration: $("#about-me").height() - 100,
     offset: 350
   })
-
   .setPin("#about-me__title" , {pushFollowers: false})
   .addIndicators()
   .addTo(scrollMagicController);
@@ -29,7 +27,6 @@ $(function() {
     triggerElement: '#contact', 
     duration: $("#contact").height()
   })
-  // .setTween(tween)
   .setPin("#contact__title" , {pushFollowers: false})
   .addTo(scrollMagicController)
 
@@ -62,7 +59,6 @@ $(function() {
       .addTo(scrollMagicController);
     }
   }
-
 
 
   // Change behavior of controller
@@ -101,15 +97,19 @@ $(function() {
 
   var workItemAnimation = new TimelineMax() 
   .add([
-        TweenMax.staggerFromTo(".work__item", 0.7, {right: -1000}, {right: 0, ease: Power4.easeOut}, 0.35)
+        TweenMax.staggerFromTo(".work__item", 0.7, {right: -2000, opacity: 0}, {right: 0, opacity:1, ease: Power4.easeOut}, 0.35)
       ]);
 
   // Scene
-  var sceneWorkItem = new ScrollMagic.Scene({
-    triggerElement: "#work"})
-  .addTo(scrollMagicController)
-  .addIndicators()
-  .setTween(workItemAnimation);
+
+  // $("#work").one( "load", function() { 
+    var sceneWorkItem = new ScrollMagic.Scene({
+        triggerElement: "#work"})
+      .addTo(scrollMagicController)
+      .addIndicators()
+      .reverse(false)
+      .setTween(workItemAnimation);
+  // } )
 
 
   $(".form__input").click(function(){
