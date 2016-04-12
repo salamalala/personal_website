@@ -1,31 +1,37 @@
 <footer class="site-footer">
 
   <div class="site-footer--description">
-    <p>{{ site.title }}</p>
-
-    <p>{{ site.description }}</p>
+    <p>{{ site.copyright }} {{ site.footer }}</p>
   </div>
 
   <ul class="site-footer--contacts">
-    <li class="site-footer-contact">
-      {% include icon-mail.html %}
+    <li>
+      <a href="mailto:{{ site.email }}" class="site-footer--contact"> 
+        {% include icon-mail.html %}
+      </a>
     </li>
 
    {% if site.github_username %}
-    <li class="site-footer-contact">
-      {% include icon-github.html username=site.github_username %}
+    <li>
+      <a href="https://github.com/{{ include.username }}" class="site-footer--contact">
+        {% include icon-github.html username=site.github_username %}
+      </a>
     </li>
     {% endif %} 
 
     {% if site.twitter_username %}
-    <li class="site-footer-contact">
+    <li>
+      <a href="https://twitter.com/{{ include.username }}" class="site-footer--contact">
       {% include icon-twitter.html username=site.twitter_username %}
+      </a>
     </li>
     {% endif %}
 
     {% if site.linkedin_username %}
-    <li class="site-footer-contact">
-      {% include icon-linkedin.html username=site.linkedin_username %}
+    <li>
+      <a href="https://linkedin.com/{{ include.username }}" class="site-footer--contact">
+        {% include icon-linkedin.html username=site.linkedin_username %}
+      </a>
     </li>
     {% endif %}
   </ul> 

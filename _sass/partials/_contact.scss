@@ -99,11 +99,12 @@
       margin-top: $medium-spacing;
       background-color: $dark-turquois;
       color: $offwhite;
-      border: none;
+      border: 3px $dark-turquois solid;
       width: 100%;
       transition: background-color 0.5s ease-out;
       &:hover {
-        background-color: $offwhite;
+        background-color: transparent;
+        border: 3px $dark-turquois solid;
         color: $dark-turquois;
       }
     }
