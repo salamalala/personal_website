@@ -97,19 +97,16 @@ $(function() {
   
   sceneWork 
   .setPin("#work__title" , {pushFollowers: false})
-  .addIndicators()
   .addTo(scrollMagicController);
 
   console.log($("#work").height());
 
   sceneAboutMe
   .setPin("#about-me__title" , {pushFollowers: false})
-  .addIndicators()
   .addTo(scrollMagicController);
   
   sceneContact
   .setPin("#contact__title" , {pushFollowers: false})
-  .addIndicators()
   .addTo(scrollMagicController);
 
 
@@ -120,7 +117,7 @@ $(function() {
 
   sceneWorkItem
       .addTo(scrollMagicController)
-      .addIndicators()
+  
       .reverse(false)
       .setTween(workItemAnimation);
 
