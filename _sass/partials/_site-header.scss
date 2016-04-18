@@ -2,7 +2,11 @@
   position: relative;
   width: 100%;
   background: $turquois;
-  height: 50vh;
+  height: 55vh;
+
+  @include media($small-screen) {
+    height: 60vh;  
+  }
 
   @include media($large-screen) {
     height: 70vh;  
@@ -85,7 +89,7 @@
   &__subtitle {
     color: $dark-turquois;
     position: absolute;
-    left: 0;
+    left: 10%;
     top: 0;
     opacity: 0;
     overflow: hidden;
@@ -95,21 +99,6 @@
 
     @include media($medium-screen) {
       left: 30%;  
-    }
-
-    &:after {
-      content: '';
-      position: absolute;
-      width: 0;
-      height: 2px;
-      left: 20px;
-      bottom: 0px;
-      background-color: $offwhite;
-      animation: line-fade-in 21s linear infinite;
-
-      @include media ($medium-screen) {
-        left: 40px;
-      }
     }
   }
 

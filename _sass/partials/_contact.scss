@@ -48,8 +48,6 @@
       }
     }
 
-    
-
     &__item {
       position: relative;
     }
@@ -71,7 +69,7 @@
       top: 0;
       left: 0;
       z-index: 1;
-      padding: 10px 20px;
+      padding: 9px 20px;
       outline: 0;
       border: 3px $dark-turquois solid;
       transition: 0.2s ease-out;
@@ -79,17 +77,24 @@
 
       &:focus + .form__label {
         top: -25px;
-        font-size: 80%;
+        font-size: 95%;
         padding-left: 0;
+
+        @include media($medium-screen) {
+          top: -32px;  
+        }
       }
 
       &:valid {
         background: $turquois;
-
         + .form__label {
           top: -25px;
-          font-size: 80%;
+          font-size: 95%;
           padding-left: 0;   
+
+          @include media($medium-screen) {
+            top: -32px;  
+          }
         }
       }
     }
@@ -97,14 +102,15 @@
     &__submit {
       padding: $base-spacing;
       margin-top: $medium-spacing;
-      background-color: $dark-turquois;
-      color: $offwhite;
-      border: 3px $dark-turquois solid;
       width: 100%;
+      background-color: $dark-turquois;
+      border: none;
+      color: $offwhite;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
       transition: background-color 0.5s ease-out;
       &:hover {
-        background-color: transparent;
-        border: 3px $dark-turquois solid;
+        background-color: $offwhite;
         color: $dark-turquois;
       }
     }

@@ -40,10 +40,12 @@ body, html {
     display: inline-block;
     color: $offwhite;
     padding: $xsmall-spacing $small-spacing;
+    margin-left: 10px;
     transform: rotate(-90deg) translateX(-100%) translateY(50%);
 
     @include media($large-screen) {
       transform: rotate(-90deg) translateX(-100%) translateY(0);      
+      margin-left: 0;
     }
   }
 }

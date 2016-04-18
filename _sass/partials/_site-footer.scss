@@ -3,6 +3,9 @@
   padding: $large-spacing 0;
   position: relative;
   background-color: $dark-grey;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
 
   @include media($large-screen) {
     @include outer-container();
@@ -22,14 +25,17 @@
       @include span-columns(8);
       display: flex;
       flex-direction: column;
-      justify-content: end;
+      justify-content: flex-end;
+    }
+
+    p {
+      margin: 0;
     }
   }
 
   &--contacts {
     margin: 0;
-    @include span-columns(5);
-    @include shift(1);
+    @include span-columns(6);
     list-style-type: none;
     padding: 0;
 

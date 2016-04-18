@@ -9,32 +9,37 @@
     color: $dark-yellow;
   }
 
+  &__pic {
+    background: url(../images/nina_sprite.jpg);
+    background-position: 0 0;
+    background-size: 200%;
+    width: 75px;
+    height: 102px;
+    float: right;
+    margin-left: 4%;
+    opacity: 0.85;
+
+    @include media($small-screen) {
+      width: 150px;
+      height: 204px;
+    }
+
+    @include media($medium-screen) {
+      width: 300px;
+      height: 409px;
+    }
+
+    &:hover {
+      background-position: 100% 0;
+    }
+  }
+
   &__title {
     background-color: $dark-yellow;
   }
 
   &__copy {
-    @include span-columns(10 of 10);
-
-    @include media($medium-screen) {
-      @include span-columns(7 of 10);
-      text-align: right;      
-    }
-  }
-
-  &__pic {
-    @include span-columns(3 of 10);
-    opacity: 0.85;
-    height: 0;
-    padding-bottom: calc(28.0101901008% + 75px); /* for a 4:3 aspect ratio */
-    background: url(../images/nina_sprite.jpg);
-    background-position: 0 0;
-    background-size: 200%;
-    shape-outside: circle(300px at 50% 50%);
-
-    &:hover {
-      background-position: 100% 0;
-
-    }
+    float: right;
+    text-align: right;
   }
 }

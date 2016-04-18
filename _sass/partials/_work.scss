@@ -1,7 +1,10 @@
 .work {
-  padding-top: $xxlarge-spacing;
   padding-bottom: $xxlarge-spacing;
   background-color: $grey;
+
+  @include media($medium-screen) {
+    padding-top: $xxlarge-spacing;  
+  }
 
   &__title {
     background-color: $dark-grey;
@@ -17,8 +20,12 @@
     transition: box-shadow 0.2s;
     font-size: 0.8rem;
 
+    @include media($medium-screen) {
+      font-size: 1.1rem;
+    }
+
     @include media($large-screen) {
-      font-size: 1rem;
+      font-size: 1.2rem;
     }
     
     &:hover {
@@ -26,7 +33,7 @@
     }
 
     &:hover .work__img {
-      opacity: 0.2;
+      opacity: 0.1;
       transform: translate3d(0,0,0);
     }
     

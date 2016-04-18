@@ -1,47 +1,48 @@
+// Init ScrollMagic Controller
+var scrollMagicController = new ScrollMagic.Controller(),
+
+    sceneWork = new ScrollMagic.Scene({
+      triggerElement: '#work', 
+      duration: $("#work").height() - 300, 
+      offset: 200
+    }),
+
+    sceneAboutMe = new ScrollMagic.Scene({
+        triggerElement: '#about-me', 
+        duration: $("#about-me").height() - 200,
+        offset: 150
+    }),
+
+    sceneContact = new ScrollMagic.Scene({
+        triggerElement: '#contact', 
+        duration: $("#contact").height(), 
+        offset: 100,
+    }),
+
+    scenes = {
+        'scene1': {
+          'work': 'anchor-work'
+        },
+        'scene2': {
+          'about-me': 'anchor-about-me'
+        },
+        'scene3': {
+          'contact': 'anchor-contact'
+        }
+    },
+
+    sceneWorkItem = new ScrollMagic.Scene({
+        triggerElement: "#work"
+    }),
+
+    workItemAnimation = new TimelineMax(); 
+
+
+
+// Shorthand for $( document ).ready()
 $(function() {
-  
-  // Init ScrollMagic Controller
-  var scrollMagicController = new ScrollMagic.Controller();
 
-  var sceneWork = new ScrollMagic.Scene({
-    triggerElement: '#work', 
-    duration: $("#work").height() - 350, 
-    offset: 250
-  })
-  .setPin("#work__title" , {pushFollowers: false})
-  .addIndicators()
-  .addTo(scrollMagicController);
-
-    
-  var sceneAboutMe = new ScrollMagic.Scene({
-    triggerElement: '#about-me', 
-    duration: $("#about-me").height() - 100,
-    offset: 350
-  })
-  .setPin("#about-me__title" , {pushFollowers: false})
-  .addIndicators()
-  .addTo(scrollMagicController);
-
-  
-  var sceneContact = new ScrollMagic.Scene({
-    triggerElement: '#contact', 
-    duration: $("#contact").height()
-  })
-  .setPin("#contact__title" , {pushFollowers: false})
-  .addTo(scrollMagicController)
-
-  var scenes = {
-    'scene1': {
-      'work': 'anchor-work'
-    },
-    'scene2': {
-      'about-me': 'anchor-about-me'
-    },
-    'scene3': {
-      'contact': 'anchor-contact'
-    }
-  }
-
+//navigation scroll to section
   for(var key in scenes) {
     // skip loop if the property is from prototype
     if (!scenes.hasOwnProperty(key)) continue;
@@ -58,8 +59,7 @@ $(function() {
       .setClassToggle('#' + obj[prop], 'active')
       .addTo(scrollMagicController);
     }
-  }
-
+  };
 
   // Change behavior of controller
   // to animate scroll instead of jump
@@ -93,31 +93,46 @@ $(function() {
     }
   });
 
-  //work items 
+  //animation on titles
+  
+  sceneWork 
+  .setPin("#work__title" , {pushFollowers: false})
+  .addIndicators()
+  .addTo(scrollMagicController);
 
-  var workItemAnimation = new TimelineMax() 
-  .add([
-        TweenMax.staggerFromTo(".work__item", 0.7, {right: -2000, opacity: 0}, {right: 0, opacity:1, ease: Power4.easeOut}, 0.35)
+  console.log($("#work").height());
+
+  sceneAboutMe
+  .setPin("#about-me__title" , {pushFollowers: false})
+  .addIndicators()
+  .addTo(scrollMagicController);
+  
+  sceneContact
+  .setPin("#contact__title" , {pushFollowers: false})
+  .addIndicators()
+  .addTo(scrollMagicController);
+
+
+  //work items slide in from the right side
+  workItemAnimation
+  .add([TweenMax.staggerFromTo(".work__item", 0.7, {right: -2000, opacity: 0}, {right: 0, opacity:1, ease: Power4.easeOut}, 0.35)
       ]);
 
-  // Scene
-
-  // $("#work").one( "load", function() { 
-    var sceneWorkItem = new ScrollMagic.Scene({
-        triggerElement: "#work"})
+  sceneWorkItem
       .addTo(scrollMagicController)
       .addIndicators()
       .reverse(false)
       .setTween(workItemAnimation);
-  // } )
 
 
+  //animation on form input elements
   $(".form__input").click(function(){
     TweenMax.fromTo(this, 0.2, {scale: 0.9, opacity: 0.5, ease:Power0.easeNone}, {scale: 1, opacity:1, ease:Bounce.easeInOut});
   });
 
+  //animation on form submit element
   $(".form__submit").click(function(){
-    TweenMax.fromTo(this, 0.2, {scale: 0.6, opacity: 0.5, ease:Power0.easeNone}, {scale: 1, opacity:1, ease:Bounce.easeInOut});
+    TweenMax.fromTo(this, 0.2, {scale: 0.4, opacity: 0.4, ease:Power0.easeNone}, {scale: 1, opacity:1, ease:Bounce.easeOut});
   });
 
 
@@ -139,11 +154,11 @@ $(function() {
     })
 
     // using the done promise callback
-      .done(function(data) {
-        console.log(data, "hello done"); 
-      }).fail(function(data) {
-        // show any errors
-        console.log(data , "hello fail");
+    .done(function(data) { 
+      var el = $('.contact__header');
+        el.text() == el.data("text-swap") 
+          ? el.text(el.data("text-original")) 
+          : el.text(el.data("text-swap"));
     });
             
   });
