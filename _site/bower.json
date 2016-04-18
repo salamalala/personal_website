@@ -1,0 +1,26 @@
+{
+  "name": "ninaregli.com",
+  "description": "Personal website",
+  "main": "Gruntfile.js",
+  "authors": [
+    "salamalala <hello@ninaregli.ch>"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/salamalala/personal_website_02",
+  "moduleType": [
+    "es6",
+    "globals",
+    "node"
+  ],
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "neat": "^1.7.4",
+    "normalize-css": "normalize.css#^3.0.3"
+  }
+}
