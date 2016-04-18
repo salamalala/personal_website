@@ -99,8 +99,6 @@ $(function() {
   .setPin("#work__title" , {pushFollowers: false})
   .addTo(scrollMagicController);
 
-  console.log($("#work").height());
-
   sceneAboutMe
   .setPin("#about-me__title" , {pushFollowers: false})
   .addTo(scrollMagicController);
