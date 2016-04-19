@@ -72,7 +72,11 @@ module.exports = function (grunt) {
         uglify: {
             dist: {
                 files: {
-                  '_site/js/main-min.js': '_js/*.js'
+                  '_site/js/main-min.js': [
+                    'bower_components/scrollmagic/scrollmagic/minified/ScrollMagic.min.js',
+                    'bower_components/scrollmagic/scrollmagic/minified/plugins/animation.gsap.min.js',
+                    '_js/*.js'
+                    ] 
                 }      
             }
         },

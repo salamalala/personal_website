@@ -11,7 +11,7 @@ email: hello@ninaregli.com
 description:  # this means to ignore newlines until "baseurl:"
   This is my personal website with some examples of my web development projects I worked on over the last few years
 copyright: © Nina Regli 2016. 
-footer: Made with ❤ and jekyll. 
+footer: Made with ♡ and jekyll. 
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "http://ninaregli.com" # the base hostname & protocol for your site
 twitter_username: NinaRegli
