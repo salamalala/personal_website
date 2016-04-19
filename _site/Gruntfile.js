@@ -24,12 +24,12 @@ module.exports = function (grunt) {
         watch: {
             sass: {
                 files: ['_sass/**/*.{scss,sass}'],
-                tasks: ['sass', 'uglify']
+                tasks: ['sass']
 
             },
             js: {
               files: ['_js/*.js'],
-              tasks:['uglify']
+              tasks: ['uglify']
             }
         },
 
@@ -103,7 +103,6 @@ module.exports = function (grunt) {
 
     // Register the grunt build task
     grunt.registerTask('build', [
-        'sass',
         'postcss',
         'uglify',
         'shell:jekyllBuild'

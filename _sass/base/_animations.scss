@@ -29,17 +29,70 @@
     width: 0px; 
   }
   30% { 
-    opacity: 1; 
-    width: 100%; 
+    opacity: 0.5; 
+    width: 80%; 
   }
   35% { 
     opacity: 0; 
-    width: 100%; 
+    width: 80%; 
   }
   100% { 
     opacity: 0; 
   }
 }
+
+
+@media screen and ($small-screen) {
+  @keyframes rotateWords {
+    0% { 
+      opacity: 1; 
+      animation-timing-function: ease-in; 
+      width: 0px; 
+    }
+    10% { 
+      opacity: 1; 
+      width: 0px; 
+    }
+    30% { 
+      opacity: 0.5; 
+      width: 65%; 
+    }
+    35% { 
+      opacity: 0; 
+      width: 65%; 
+    }
+    100% { 
+      opacity: 0; 
+    }
+  }
+}
+
+
+@media screen and ($medium-screen) {
+  @keyframes rotateWords {
+    0% { 
+      opacity: 1; 
+      animation-timing-function: ease-in; 
+      width: 0px; 
+    }
+    10% { 
+      opacity: 1; 
+      width: 0px; 
+    }
+    30% { 
+      opacity: 0.5; 
+      width: 40%; 
+    }
+    35% { 
+      opacity: 0; 
+      width: 40%; 
+    }
+    100% { 
+      opacity: 0; 
+    }
+  }
+}
+
 
 @keyframes heart-beat {
   0% {    
@@ -67,7 +120,7 @@ transform: scale(0.95);
   // }
 
   &__rotating {
-    animation: rotateWords 21s linear infinite;  
+    animation: rotateWords 21s linear 0s infinite;  
   }
 
   &__pumping-heart {

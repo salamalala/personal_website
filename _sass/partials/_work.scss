@@ -75,11 +75,11 @@
     color: $offwhite;  
     text-align: left;
     margin-bottom: $base-spacing;
-    padding: $base-spacing;
+    padding: $medium-spacing $base-spacing;
     background-color: $mid-grey;
 
     @include media($medium-screen) {
-      padding: $medium-spacing;
+      padding: $large-spacing $medium-spacing;
     }
 
     @include media($large-screen) {

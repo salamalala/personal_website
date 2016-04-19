@@ -109,7 +109,7 @@ $(function() {
 
   //work items slide in from the right side
   workItemAnimation
-  .add([TweenMax.staggerFromTo(".work__item", 0.7, {right: -2000, opacity: 0}, {right: 0, opacity:1, ease: Power4.easeOut}, 0.35)
+  .add([TweenMax.staggerFromTo(".work__item", 0.7, {x: 200, opacity: 0}, {x: 0, opacity:1, ease: Power4.easeOut}, 0.35)
       ]);
 
   sceneWorkItem

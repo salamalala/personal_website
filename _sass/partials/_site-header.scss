@@ -9,7 +9,7 @@
   }
 
   @include media($large-screen) {
-    min-height: 70vh;  
+    min-height: 65vh;  
   }
 
   &:before {
@@ -64,7 +64,7 @@
     @include media($large-screen) {
       @include outer-container(100%);
       padding-top: 12vh;
-      padding-bottom: 17vh;
+      padding-bottom: 12vh;
     }
   }
 
@@ -90,6 +90,7 @@
     opacity: 0;
     overflow: hidden;
     white-space: nowrap;
+    width: 0px;
     padding-bottom: $medium-spacing;
     font-size: modular-scale(2);
 
@@ -98,7 +99,7 @@
     }
 
     @include media($medium-screen) {
-      left: 30%;  
+      left: 40%;
     }
   }
 
