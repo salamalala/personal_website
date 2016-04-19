@@ -103,10 +103,10 @@ module.exports = function (grunt) {
 
     // Register the grunt build task
     grunt.registerTask('build', [
-        'shell:jekyllBuild',
         'sass',
         'postcss',
-        'uglify'
+        'uglify',
+        'shell:jekyllBuild'
     ]);
 
     // Register build as the default task fallback
