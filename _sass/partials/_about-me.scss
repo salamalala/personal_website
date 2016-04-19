@@ -29,7 +29,8 @@
       height: 409px;
     }
 
-    &:hover {
+    &:hover, 
+    &:focus {
       background-position: 100% 0;
     }
   }

@@ -93,8 +93,7 @@ $(function() {
     }
   });
 
-  //animation on titles
-  
+  //animation on section titles
   sceneWork 
   .setPin("#work__title" , {pushFollowers: false})
   .addTo(scrollMagicController);
@@ -115,10 +114,8 @@ $(function() {
 
   sceneWorkItem
       .addTo(scrollMagicController)
-  
       .reverse(false)
       .setTween(workItemAnimation);
-
 
   //animation on form input elements
   $(".form__input").click(function(){

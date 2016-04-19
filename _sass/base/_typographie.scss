@@ -3,7 +3,7 @@ body {
   font-family: $base-font;
   font-size: $base-font-size-small;
 
-  @include media($medium-screen) {
+  @include media($small-screen) {
     font-size: $base-font-size-normal;
   }
 

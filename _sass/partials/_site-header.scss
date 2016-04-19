@@ -2,14 +2,14 @@
   position: relative;
   width: 100%;
   background: $turquois;
-  height: 55vh;
+  min-height: 55vh;
 
   @include media($small-screen) {
-    height: 60vh;  
+    min-height: 60vh;  
   }
 
   @include media($large-screen) {
-    height: 70vh;  
+    min-height: 70vh;  
   }
 
   &:before {
@@ -52,23 +52,23 @@
     @include outer-container(90%);
     position: relative;
     z-index: 3;
-    padding-top: $large-spacing;
-    padding-bottom: $xlarge-spacing;
+    padding-top: 10vh;
+    padding-bottom: 10vh;
+
+    @include media($small-screen) {
+      padding-top: $xxlarge-spacing;
+      padding-top: 15vh;
+      padding-bottom: 15vh;
+    }
 
     @include media($large-screen) {
       @include outer-container(100%);
+      padding-top: 12vh;
+      padding-bottom: 17vh;
     }
   }
 
   &__title {
-    margin-top: 70px;
-    margin-top: 5vh;
-
-    @include media($large-screen) {
-      margin-top: 150px;
-      margin-top: 15vh;
-    }
-
     a {
       display: block;
       text-align: center;
@@ -79,11 +79,7 @@
   &__subtitle-wrapper {
     margin: 0 auto;
     position: relative;
-    width: 300px;
-
-    @include media($medium-screen) {
-      width: 600px;  
-    }
+    width: 90%;
   }
 
   &__subtitle {
@@ -94,8 +90,12 @@
     opacity: 0;
     overflow: hidden;
     white-space: nowrap;
-    padding-bottom: $xxsmall-spacing;
-    font-size: modular-scale(3);
+    padding-bottom: $medium-spacing;
+    font-size: modular-scale(2);
+
+    @include media($small-screen) {
+      left: 25%;  
+    }
 
     @include media($medium-screen) {
       left: 30%;  
