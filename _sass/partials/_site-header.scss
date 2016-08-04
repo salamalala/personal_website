@@ -5,11 +5,11 @@
   min-height: 55vh;
 
   @include media($small-screen) {
-    min-height: 60vh;  
+    min-height: 60vh;
   }
 
   @include media($large-screen) {
-    min-height: 65vh;  
+    min-height: 90vh;
   }
 
   &:before {
@@ -40,7 +40,7 @@
     background-color: $offwhite;
 
     @include media($medium-screen) {
-      width: 105px;  
+      width: 105px;
     }
 
     a {
@@ -50,36 +50,36 @@
 
   &__content {
     @include outer-container(90%);
-    position: relative;
+    position: absolute;
     z-index: 3;
-    padding-top: 10vh;
-    padding-bottom: 10vh;
-
-    @include media($small-screen) {
-      padding-top: $xxlarge-spacing;
-      padding-top: 15vh;
-      padding-bottom: 15vh;
-    }
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%);
 
     @include media($large-screen) {
       @include outer-container(100%);
-      padding-top: 12vh;
-      padding-bottom: 12vh;
+    }
+
+    svg {
+      position: absolute;
+      width: 220px;
+      height: auto;
+      left: -20%;
+      top: -20%;
     }
   }
 
   &__title {
-    a {
-      display: block;
-      text-align: center;
-      color: $offwhite;
-    }
+    position: relative;
+    text-align: center;
+    color: $offwhite;
   }
 
   &__subtitle-wrapper {
     margin: 0 auto;
     position: relative;
     width: 90%;
+    font-family: $secondary-font;
   }
 
   &__subtitle {
@@ -95,7 +95,7 @@
     font-size: modular-scale(2);
 
     @include media($small-screen) {
-      left: 25%;  
+      left: 25%;
     }
 
     @include media($medium-screen) {
@@ -116,4 +116,3 @@
     }
   }
 }
-

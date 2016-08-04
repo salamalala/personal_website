@@ -2,6 +2,7 @@
   @include outer-container(90%);
   position: relative;
   z-index: 3;
+  font-family: $secondary-font;
 
   @include media($large-screen) {
     @include outer-container();
@@ -40,4 +41,3 @@
     }
   }
 }
-

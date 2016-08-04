@@ -1,5 +1,5 @@
 body {
-  color: $main-font-color; 
+  color: $main-font-color;
   font-family: $base-font;
   font-size: $base-font-size-small;
 
@@ -12,25 +12,24 @@ body {
   }
 }
 
-h1, 
+h1,
 h2 {
   font-style: normal;
+  font-family: $base-font;
   letter-spacing: 0.1px;
   margin: 0;
 
   @include media($medium-screen) {
-    letter-spacing: 0.2px;
+    letter-spacing: 5px;
   }
 }
 
 h1 {
-  font-family: $secondary-font;
   font-size: $xlarge-font-size;
   font-weight: 700;
 }
 
 h2 {
-  font-family: $base-font-size;
   font-size: $large-font-size;
   font-weight: 500;
 }
@@ -56,7 +55,7 @@ p {
 }
 
 a {
-  color: $main-font-color; 
+  color: $main-font-color;
   text-decoration: none;
   &:hover {
     color: $offwhite;
