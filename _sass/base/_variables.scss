@@ -20,17 +20,18 @@ $dark-turquois: darken($turquois, 20%);
 
 $main-font-color: $dark-grey;
 
-
-$base-font-size-small: 0.75em;
-$base-font-size-normal: 1em;
-$base-font-size-large: 1.1em;
+$base-font-size-xs: 0.65em;
+$base-font-size-sm: 0.75em;
+$base-font-size-md: 1em;
+$base-font-size-lg: 1.1em;
 
 
 $small-font-size: modular-scale(-1);
 $base-font-size: $modular-scale-base;
 $medium-font-size: modular-scale(1);
 $large-font-size: modular-scale(2);
-$xlarge-font-size: modular-scale(7);
+$xlarge-font-size: modular-scale(6);
+$xxlarge-font-size: modular-scale(7);
 
 //sizes - using the perfect fourth
 $xxsmall-spacing: modular-scale(-3);

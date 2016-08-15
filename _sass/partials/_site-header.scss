@@ -28,6 +28,8 @@
 
   &__wrapper {
     @include outer-container(90%);
+    @include display(flex);
+    @include flex-direction(column);
 
     @include media($large-screen) {
       @include outer-container();
@@ -57,18 +59,33 @@
   }
 
   &__content {
-    position: absolute;
+    position: relative;
     z-index: 3;
-    top: 40%;
-    left: 50%;
-    transform: translate(-50%);
+    @include align-self(center);
+    margin-top: 20vh;
+
+    @include media($large-screen) {
+      margin-top: 30vh;
+    }
 
     svg {
       position: absolute;
-      width: 220px;
       height: auto;
-      left: -20%;
-      top: -20%;
+      width: 100px;
+      left: -10%;
+      top: -10%;
+
+      @include media($medium-screen) {
+        width: 150px;
+        left: -15%;
+        top: -15%;
+      }
+
+      @include media($large-screen) {
+        width: 220px;
+        left: -20%;
+        top: -20%;
+      }
     }
   }
 

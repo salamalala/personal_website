@@ -114,7 +114,7 @@ transform: scale(0.95);
 .animation {
 
   &__triangle {
-    animation: zoomThenRotate 2s ease-out infinite;
+    animation: zoomThenRotate 3s ease-out infinite;
     transform-origin: center;
   }
 

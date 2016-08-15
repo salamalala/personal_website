@@ -1,14 +1,18 @@
 body {
   color: $main-font-color;
   font-family: $base-font;
-  font-size: $base-font-size-small;
+  font-size: $base-font-size-xs;
 
   @include media($small-screen) {
-    font-size: $base-font-size-normal;
+    font-size: $base-font-size-sm;
+  }
+
+  @include media($medium-screen) {
+    font-size: $base-font-size-md;
   }
 
   @include media($large-screen) {
-    font-size: $base-font-size-large;
+    font-size: $base-font-size-lg;
   }
 }
 
@@ -27,6 +31,10 @@ h2 {
 h1 {
   font-size: $xlarge-font-size;
   font-weight: 700;
+
+  @include media($small-screen) {
+    font-size: $xxlarge-font-size;
+  }
 }
 
 h2 {
