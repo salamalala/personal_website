@@ -463,12 +463,8 @@ a:hover {
 }
 
 .animation__triangle {
-  animation: zoomThenRotate 1.5s ease-out infinite;
+  animation: zoomThenRotate 2s ease-out infinite;
   transform-origin: center;
-}
-
-.animation__triangle circle {
-  opacity: 0.0;
 }
 
 .animation__rotating {
