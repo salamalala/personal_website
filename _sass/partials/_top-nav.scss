@@ -3,7 +3,7 @@
   z-index: 3;
   font-family: $secondary-font;
 
-  &--list {
+  &__list {
     list-style-type: none;
     display: flex;
     justify-content: flex-end;
@@ -15,23 +15,58 @@
     }
   }
 
-  &--items {
+  &__items {
     padding-left: $base-spacing;
 
     @include media($medium-screen) {
       padding-left: $large-spacing;
     }
+  }
 
-    a {
+  &__link:hover {
+    svg {
+      transform: rotate(0);
+      transform-origin: center center;
+
+      path {
+        fill: $dark-turquois;
+      }
+    }
+
+    .top-nav__text {
+      transform: translateY(-2px);
+    }
+  }
+
+  &__text {
       color: $offwhite;
       display: inline-block;
       transform: translateY(0);
-      transition: all 0.2s ease-out;
+      transition: transform 0.4s ease-out;
+  }
 
-      &:hover {
-        color: $dark-turquois;
-        transform: translateY(-2px);
+  &__triangle {
+    svg {
+      height: calc(#{$base-font-size-xs} * 0.6);
+      transform: rotateZ(-180deg);
+      transition: all 0.4s ease-out;
+
+      @include media($small-screen) {
+        height: calc(#{$base-font-size-sm} * 0.6);
+      }
+
+      @include media($medium-screen) {
+        height: calc(#{$base-font-size-md} * 0.6);
+      }
+
+      @include media($large-screen) {
+        height: calc(#{$base-font-size-lg} * 0.6);
+      }
+
+      path {
+        transition: fill 0.4s ease-out;
       }
     }
+
   }
 }

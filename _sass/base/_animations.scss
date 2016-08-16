@@ -114,8 +114,10 @@ transform: scale(0.95);
 .animation {
 
   &__triangle {
-    animation: zoomThenRotate 3s ease-out infinite;
-    transform-origin: center;
+    svg {
+      animation: zoomThenRotate 3s ease-out infinite;
+      transform-origin: center;
+    }
   }
 
   &__rotating {

@@ -1,10 +1,3 @@
-<svg class="animation__triangle" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Layer_1" x="0px" y="0px" viewBox="267.713 46.667 445.667 445.667" enable-background="new 267.713 46.667 445.667 445.667" xml:space="preserve">
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Layer_1" x="0px" y="0px" viewBox="267.713 46.667 445.667 445.667" enable-background="new 267.713 46.667 445.667 445.667" xml:space="preserve">
   <path fill="#DDC36E" d="M713.38 46.667l-445.667 115.85L597.53 492.333 713.38 46.667z"/>
 </svg>
-
-
-<!-- <svg class="animation__triangle">
-  <path fill="#DDC36E"" d="M25,0 L0,50, L50,50 Z"/>
-
-  <circle fill="#DDC36E"" cx="25" cy="25" r="25" />
-</svg> -->
