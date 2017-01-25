@@ -9,9 +9,9 @@
   <title>About</title>
   <meta name="description" content="This is my personal website with some examples of my web development projects I worked on over the last few years">
   <link rel="stylesheet" href="/bower_components/normalize-css/normalize.css">
-  <link rel="stylesheet" href="/css/main.css">
-  <link rel="canonical" href="http://ninaregli.com/about/">
-  <link rel="alternate" type="application/rss+xml" title="Nina Regli" href="http://ninaregli.com/feed.xml">
+  <link rel="stylesheet" href="/assets/main.css">
+  <link rel="canonical" href="http://localhost:4000/about/">
+  <link rel="alternate" type="application/rss+xml" title="Nina Regli" href="http://localhost:4000/feed.xml">
   <script src="https://use.typekit.net/tya0ddp.js"></script>
   <script>try{Typekit.load({ async: true });}catch(e){}</script>
 </head>
@@ -24,10 +24,34 @@
     <div class="site-header__wrapper">
 
       <nav class="top-nav">
-  <ul class="top-nav--list">
-    <li class="top-nav--items"><a href="#work" id="anchor-work">work</a></li>
-    <li class="top-nav--items"><a href="#about-me" id="anchor-about-me">about me</a></li>
-    <li class="top-nav--items"><a href="#contact" id="anchor-contact">contact</a></li>
+  <ul class="top-nav__list">
+    <li class="top-nav__items">
+      <a href="#work" class="top-nav__link" id="anchor-work">
+        <span class="top-nav__triangle"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Layer_1" x="0" y="0" viewBox="212.34 5.72 578.61 505.36" enable-background="new 212.339 5.723 578.612 505.356" xml:space="preserve">
+  <path fill="#E8E1D3" d="M791.47 6.32L212.86 5.4l296.03 505.84L791.47 6.32z"/>
+</svg>
+</span>
+        <span class="top-nav__text">work</span>
+      </a>
+    </li>
+    <li class="top-nav__items">
+      <a href="#about-me" class="top-nav__link" id="anchor-about-me">
+        <span class="top-nav__triangle"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Layer_1" x="0" y="0" viewBox="212.34 5.72 578.61 505.36" enable-background="new 212.339 5.723 578.612 505.356" xml:space="preserve">
+  <path fill="#E8E1D3" d="M791.47 6.32L212.86 5.4l296.03 505.84L791.47 6.32z"/>
+</svg>
+</span>
+        <span class="top-nav__text">about me</span>
+      </a>
+    </li>
+    <li class="top-nav__items">
+      <a href="#contact" class="top-nav__link" id="anchor-contact">
+        <span class="top-nav__triangle"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Layer_1" x="0" y="0" viewBox="212.34 5.72 578.61 505.36" enable-background="new 212.339 5.723 578.612 505.356" xml:space="preserve">
+  <path fill="#E8E1D3" d="M791.47 6.32L212.86 5.4l296.03 505.84L791.47 6.32z"/>
+</svg>
+</span>
+        <span class="top-nav__text">contact</span>
+      </a>
+    </li>
   </ul>
 </nav>
 
@@ -37,16 +61,12 @@
       </div> -->
 
       <div class="site-header__content">
-        <svg class="animation__triangle" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Layer_1" x="0px" y="0px" viewBox="267.713 46.667 445.667 445.667" enable-background="new 267.713 46.667 445.667 445.667" xml:space="preserve">
+        <span class="animation__triangle">
+          <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Layer_1" x="0px" y="0px" viewBox="267.713 46.667 445.667 445.667" enable-background="new 267.713 46.667 445.667 445.667" xml:space="preserve">
   <path fill="#DDC36E" d="M713.38 46.667l-445.667 115.85L597.53 492.333 713.38 46.667z"/>
 </svg>
 
-
-<!-- <svg class="animation__triangle">
-  <path fill="#DDC36E"" d="M25,0 L0,50, L50,50 Z"/>
-
-  <circle fill="#DDC36E"" cx="25" cy="25" r="25" />
-</svg> -->
+        </span>
 
         <h1 class="site-header__title">Hi I'm Nina</h1>
 
@@ -159,9 +179,9 @@ ninaregli
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.2/TweenMax.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.2/plugins/ScrollToPlugin.min.js"></script>
-   
+
    <!--  <script src="../bower_components/scrollmagic/scrollmagic/uncompressed/plugins/debug.addIndicators.js"></script> -->
-    <script src="js/main-min.js"></script>
+    <script src="assets/main-min.js"></script>
 
   </body>
 

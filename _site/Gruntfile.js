@@ -28,7 +28,7 @@ module.exports = function (grunt) {
 
             },
             js: {
-              files: ['_js/*.js'],
+              files: ['assets/*.js'],
               tasks: ['uglify']
             }
         },
@@ -40,14 +40,14 @@ module.exports = function (grunt) {
                 relativeAssets: false,
                 outputStyle: 'expanded',
                 sassDir: '_sass',
-                cssDir: '_site/css'
+                cssDir: '_site/assets'
             },
             build: {
                 files: [{
                     expand: true,
                     cwd: '_sass/',
                     src: ['**/*.{scss,sass}'],
-                    dest: '_site/css',
+                    dest: '_site/assets',
                     ext: '.css'
                 }]
             }
@@ -65,19 +65,19 @@ module.exports = function (grunt) {
               ]
             },
             dist: {
-              src: '_site/css/*.css'
+              src: '_site/assets/*.css'
             }
         },
 
         uglify: {
             dist: {
                 files: {
-                  '_site/js/main-min.js': [
+                  'assets/main-min.js': [
                     'bower_components/scrollmagic/scrollmagic/minified/ScrollMagic.min.js',
                     'bower_components/scrollmagic/scrollmagic/minified/plugins/animation.gsap.min.js',
-                    '_js/*.js'
-                    ] 
-                }      
+                    'assets/*.js'
+                    ]
+                }
             }
         },
 
