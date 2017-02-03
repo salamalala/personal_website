@@ -10,10 +10,19 @@
   <meta name="description" content="You’ll find this post in your _posts directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different wa...">
   <link rel="stylesheet" href="/bower_components/normalize-css/normalize.css">
   <link rel="stylesheet" href="/assets/main.css">
-  <link rel="canonical" href="http://localhost:4000/jekyll/update/2016/03/07/welcome-to-jekyll.html">
-  <link rel="alternate" type="application/rss+xml" title="Nina Regli" href="http://localhost:4000/feed.xml">
-  <script src="https://use.typekit.net/tya0ddp.js"></script>
-  <script>try{Typekit.load({ async: true });}catch(e){}</script>
+  <link rel="canonical" href="http://ninaregli.com/jekyll/update/2016/03/07/welcome-to-jekyll.html">
+  <link rel="alternate" type="application/rss+xml" title="Nina Regli" href="http://ninaregli.com/feed.xml">
+  <script>
+  (function(d) {
+    var tkTimeout=3000;
+    if(window.sessionStorage){if(sessionStorage.getItem('useTypekit')==='false'){tkTimeout=0;}}
+    var config = {
+      kitId: 'tya0ddp',
+      scriptTimeout: tkTimeout
+    },
+    h=d.documentElement,t=setTimeout(function(){h.className=h.className.replace(/\bwf-loading\b/g,"")+"wf-inactive";if(window.sessionStorage){sessionStorage.setItem("useTypekit","false")}},config.scriptTimeout),tk=d.createElement("script"),f=false,s=d.getElementsByTagName("script")[0],a;h.className+="wf-loading";tk.src='//use.typekit.net/'+config.kitId+'.js';tk.async=true;tk.onload=tk.onreadystatechange=function(){a=this.readyState;if(f||a&&a!="complete"&&a!="loaded")return;f=true;clearTimeout(t);try{Typekit.load(config)}catch(e){}};s.parentNode.insertBefore(tk,s)
+  })(document);
+</script>
 </head>
 
 

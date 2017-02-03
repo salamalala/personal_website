@@ -1,5 +1,6 @@
 'use strict';
 
+
 module.exports = function (grunt) {
 
     // Show elapsed time after tasks run to visualize performance
@@ -10,62 +11,38 @@ module.exports = function (grunt) {
     grunt.initConfig({
         pkg: grunt.file.readJSON('package.json'),
 
-        // shell commands for use in Grunt tasks
-        shell: {
-            jekyllBuild: {
-                command: 'jekyll build'
-            },
-            jekyllServe: {
-                command: 'jekyll serve'
-            }
+        jekyll: {
+           build : {
+               dest: '_site'
+           }
         },
 
-        // watch for files to change and run tasks when they do
-        watch: {
-            sass: {
-                files: ['_sass/**/*.{scss,sass}'],
-                tasks: ['sass']
-
-            },
-            js: {
-              files: ['assets/*.js'],
-              tasks: ['uglify']
-            }
-        },
-
-        // sass (libsass) config
         sass: {
             options: {
-                sourceMap: true,
-                relativeAssets: false,
-                outputStyle: 'expanded',
-                sassDir: '_sass',
-                cssDir: '_site/assets'
+                sourceMap: true
             },
-            build: {
-                files: [{
-                    expand: true,
-                    cwd: '_sass/',
-                    src: ['**/*.{scss,sass}'],
-                    dest: '_site/assets',
-                    ext: '.css'
-                }]
+            dist: {
+                files: {
+                    'assets/main.css': '_sass/main.scss'
+                }
             }
         },
 
-        // add autoprefixer after css has been created
+        //do some clever stuff to the css file such as minify and autoprefix it.
         postcss: {
             options: {
-              map: true, // inline sourcemaps
+                map: true, // inline sourcemaps
 
-              processors: [
-                require('pixrem')(), // add fallbacks for rem units
-                require('autoprefixer')({browsers: 'last 2 versions'}), // add vendor prefixes
-                require('cssnano')() // minify the result
-              ]
+                processors: [
+                    require('pixrem')(), // add fallbacks for rem units
+                    require('autoprefixer')({browsers: 'last 4 versions'}), // add vendor prefixes
+                    require('cssnano')() // minify the result
+                ]
             },
             dist: {
-              src: '_site/assets/*.css'
+                files: {
+                    'assets/main-min.css': 'assets/main.css'
+                }
             }
         },
 
@@ -75,9 +52,44 @@ module.exports = function (grunt) {
                   'assets/main-min.js': [
                     'bower_components/scrollmagic/scrollmagic/minified/ScrollMagic.min.js',
                     'bower_components/scrollmagic/scrollmagic/minified/plugins/animation.gsap.min.js',
-                    'assets/*.js'
+                    'assets/main.js'
                     ]
                 }
+            }
+        },
+
+        //autoreload browser and access it from different devices
+        browserSync: {
+            bsFiles: {
+                src : ['_site']
+            },
+            options: {
+                watchTask: true,
+                ghostMode: {
+                    clicks: true,
+                    scroll: true,
+                    links: true,
+                    forms: true
+                },
+                server: {
+                    baseDir: '_site'
+                }
+            }
+        },
+
+        // watch for files to change and run tasks when they do
+        watch: {
+            sass: {
+                files: ['_sass/**/*.{scss, sass}'],
+                tasks: ['sass', 'postcss']
+            },
+            js: {
+                files: ['assets/main.js'],
+                tasks: ['uglify']
+            },
+            jekyll: {
+                files: ['_layouts/*.html', '_includes/*.html', '_data/*.yml', '*.html', '_sass/**/*.{scss, sass}', '_includes/*.svg'],
+                tasks: ['jekyll']
             }
         },
 
@@ -85,30 +97,19 @@ module.exports = function (grunt) {
         concurrent: {
             serve: [
                 'sass',
-                'watch',
-                'uglify',
-                'shell:jekyllServe'
-            ],
-            options: {
-                logConcurrentOutput: true
-            }
+                'postcss',
+                'uglify'
+        ],
+        options: {
+            logConcurrentOutput: true
         }
+    }
 
     });
 
     // Register the grunt serve task
-    grunt.registerTask('serve', [
-        'concurrent:serve'
+    grunt.registerTask('default', [
+        'concurrent:serve', 'jekyll', 'browserSync', 'watch'
     ]);
-
-    // Register the grunt build task
-    grunt.registerTask('build', [
-        'postcss',
-        'uglify',
-        'shell:jekyllBuild'
-    ]);
-
-    // Register build as the default task fallback
-    grunt.registerTask('default', 'build');
 
 };

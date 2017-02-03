@@ -2,20 +2,20 @@
 var scrollMagicController = new ScrollMagic.Controller(),
 
     sceneWork = new ScrollMagic.Scene({
-      triggerElement: '#work', 
-      duration: $("#work").height() - 300, 
+      triggerElement: '#work',
+      duration: $("#work").height() - 300,
       offset: 200
     }),
 
     sceneAboutMe = new ScrollMagic.Scene({
-        triggerElement: '#about-me', 
+        triggerElement: '#about-me',
         duration: $("#about-me").height() - 200,
         offset: 150
     }),
 
     sceneContact = new ScrollMagic.Scene({
-        triggerElement: '#contact', 
-        duration: $("#contact").height(), 
+        triggerElement: '#contact',
+        duration: $("#contact").height(),
         offset: 100,
     }),
 
@@ -35,7 +35,7 @@ var scrollMagicController = new ScrollMagic.Controller(),
         triggerElement: "#work"
     }),
 
-    workItemAnimation = new TimelineMax(); 
+    workItemAnimation = new TimelineMax();
 
 
 
@@ -53,8 +53,8 @@ $(function() {
       // skip loop if the property is from prototype
       if(!obj.hasOwnProperty(prop)) continue;
 
-      new ScrollMagic.Scene({ 
-        triggerElement: '#' + prop 
+      new ScrollMagic.Scene({
+        triggerElement: '#' + prop
       })
       .setClassToggle('#' + obj[prop], 'active')
       .addTo(scrollMagicController);
@@ -94,20 +94,20 @@ $(function() {
   });
 
   //animation on section titles
-  sceneWork 
+  sceneWork
   .setPin("#work__title" , {pushFollowers: false})
   .addTo(scrollMagicController);
 
   sceneAboutMe
   .setPin("#about-me__title" , {pushFollowers: false})
   .addTo(scrollMagicController);
-  
+
   sceneContact
   .setPin("#contact__title" , {pushFollowers: false})
   .addTo(scrollMagicController);
 
 
-  //work items slide in from the right side
+  // work items slide in from the right side
   workItemAnimation
   .add([TweenMax.staggerFromTo(".work__item", 0.7, {x: 200, opacity: 0}, {x: 0, opacity:1, ease: Power4.easeOut}, 0.35)
       ]);
@@ -128,7 +128,7 @@ $(function() {
   });
 
 
-  //contact form 
+  //contact form
 
   $('#ajax-form').submit(function(e){
     e.preventDefault();
@@ -146,13 +146,13 @@ $(function() {
     })
 
     // using the done promise callback
-    .done(function(data) { 
+    .done(function(data) {
       var el = $('.contact__header');
-        el.text() == el.data("text-swap") 
-          ? el.text(el.data("text-original")) 
+        el.text() == el.data("text-swap")
+          ? el.text(el.data("text-original"))
           : el.text(el.data("text-swap"));
     });
-            
+
   });
 
 });

@@ -1,13 +1,13 @@
 .work {
   padding-bottom: $xxlarge-spacing;
-  background-color: $grey;
+  background-color: $dark-grey;
 
   @include media($medium-screen) {
-    padding-top: $xxlarge-spacing;  
+    padding-top: $xxlarge-spacing;
   }
 
   &__title {
-    background-color: $dark-grey;
+    background-color: $grey;
   }
 
   &__item {
@@ -21,9 +21,9 @@
       cursor: pointer;
       background: transparent;
       transition: box-shadow 0.2s;
-      font-size: 1.1rem;
+      font-size: 1rem;
 
-      &:hover, 
+      &:hover,
       &:focus {
         box-shadow: inset 0 0 0 5px $offwhite;
       }
@@ -33,7 +33,7 @@
         opacity: 0.1;
         transform: translate3d(0,0,0);
       }
-      
+
       &:hover .work__title-item,
       &:focus .work__title-item {
         opacity: 1;
@@ -66,13 +66,13 @@
       width: calc(100% + 10px);
       transition: opacity 0.35s, transform 0.35s;
       transform: translate3d(-5px,0,0);
-      backface-visibility: hidden;  
+      backface-visibility: hidden;
       z-index: 1;
     }
-  }   
+  }
 
   &__caption {
-    color: $offwhite;  
+    color: $offwhite;
     text-align: left;
     margin-bottom: $base-spacing;
     padding: $medium-spacing $base-spacing;
@@ -92,7 +92,7 @@
       background-color: none;
       backface-visibility: hidden;
 
-      &:before, 
+      &:before,
       &:after {
         pointer-events: none;
       }
@@ -102,7 +102,7 @@
   &__title-item {
     margin: 0;
     position: relative;
-    padding-bottom: $xxsmall-spacing; 
+    padding-bottom: $xxsmall-spacing;
     text-transform: uppercase;
     font-weight: 500;
     font-size: $medium-font-size;
@@ -127,7 +127,7 @@
       @include media($large-screen) {
         height: 3px;
         transition: transform 0.55s;
-        transform: translate3d(-100%,0,0);  
+        transform: translate3d(-100%,0,0);
       }
     }
   }
@@ -163,7 +163,7 @@ figure {
     }
     &:nth-child(odd) {
       @include span-columns(5 of 10);
-      @include omega;  
+      @include omega;
     }
     &:first-child {
       @include span-columns(8 of 10);
@@ -178,10 +178,21 @@ figure {
       @include shift(3 of 10);
       margin-top: 0;
     }
+
+    &:nth-child(2){
+      margin-top: modular-scale(7);
+    }
+
+    &:nth-child(3) {
+      margin-top: modular-scale(10);
+    }
+
+    &:nth-child(4) {
+      margin-top: - modular-scale(4);
+    }
+
+    &:last-child {
+      margin-top: modular-scale(8);
+    }
   }
 }
-
-
-
-
-

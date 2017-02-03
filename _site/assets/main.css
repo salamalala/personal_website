@@ -53,7 +53,7 @@ h4 {
 
 p {
   font-style: normal;
-  font-weight: 500;
+  font-weight: 400;
   line-height: 1.5;
   letter-spacing: 1.2px; }
 
@@ -655,12 +655,12 @@ body, html {
 
 .work {
   padding-bottom: 4.20873em;
-  background-color: #5F6968; }
+  background-color: #3C4241; }
   @media screen and (min-width: 46.5em) {
     .work {
       padding-top: 4.20873em; } }
   .work__title {
-    background-color: #3C4241; }
+    background-color: #5F6968; }
   .work__item {
     position: relative;
     text-align: center;
@@ -672,7 +672,7 @@ body, html {
         cursor: pointer;
         background: transparent;
         transition: box-shadow 0.2s;
-        font-size: 1.1rem; }
+        font-size: 1rem; }
         .work__item:hover, .work__item:focus {
           box-shadow: inset 0 0 0 5px #E8E1D3; }
         .work__item:hover .work__img, .work__item:focus .work__img {
@@ -801,7 +801,15 @@ figure {
       margin-left: 31.19142%;
       margin-top: 0; }
       figure:first-child:last-child {
-        margin-right: 0; } }
+        margin-right: 0; }
+    figure:nth-child(2) {
+      margin-top: 7.47844em; }
+    figure:nth-child(3) {
+      margin-top: 17.71338em; }
+    figure:nth-child(4) {
+      margin-top: -3.15733em; }
+    figure:last-child {
+      margin-top: 9.96876em; } }
 
 .about-me {
   background-color: #DDC36E;
