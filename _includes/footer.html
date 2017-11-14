@@ -1,12 +1,12 @@
 <footer class="site-footer">
 
   <div class="site-footer--description">
-    <p>{{ site.copyright }} {{ site.footer }}</p>
+    
   </div>
 
   <ul class="site-footer--contacts">
     <li>
-      <a href="mailto:{{ site.email }}" class="site-footer--contact"> 
+      <a href="mailto:{{ site.email }}" class="site-footer--contact">
         {% include icon-mail.html %}
       </a>
     </li>
@@ -17,7 +17,7 @@
           {% include icon-github.html username=site.github_username %}
         </a>
       </li>
-    {% endif %} 
+    {% endif %}
 
     {% if site.twitter_username %}
       <li>
@@ -34,6 +34,6 @@
         </a>
       </li>
     {% endif %}
-  </ul> 
+  </ul>
 
 </footer>

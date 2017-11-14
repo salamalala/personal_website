@@ -12,6 +12,7 @@
     display: flex;
     flex-direction: row;
     justify-content: center;
+    min-height: 30vh;
   }
 
   &--description {
@@ -20,7 +21,7 @@
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
-    
+
     @include media($medium-screen) {
       @include span-columns(8);
       display: flex;
@@ -34,23 +35,11 @@
   }
 
   &--contacts {
-    margin: 0;
-    @include span-columns(6);
-    list-style-type: none;
-    padding: 0;
-
-    @include media($medium-screen) {
-      @include span-columns(3);
-      @include shift(1);
-    }
-
-    li:not(:last-child) {
-      padding-bottom: $xsmall-spacing;
-    }
+    float: right;
   }
 
   &--contact {
-    color: $offwhite;  
+    color: $offwhite;
     transition: all 0.5s ease-out;
 
     &:hover {
@@ -73,4 +62,3 @@
     margin-right: 10px;
   }
 }
-

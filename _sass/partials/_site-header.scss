@@ -2,15 +2,7 @@
   position: relative;
   width: 100%;
   background: $turquois;
-  min-height: 55vh;
-
-  @include media($small-screen) {
-    min-height: 60vh;
-  }
-
-  @include media($large-screen) {
-    min-height: 90vh;
-  }
+  min-height: 70vh;
 
   &:before {
     content: '';
@@ -30,10 +22,26 @@
     @include outer-container(90%);
     @include display(flex);
     @include flex-direction(column);
+    position: relative;
 
     @include media($large-screen) {
       @include outer-container();
     }
+  }
+
+  &__construction {
+    color: $offwhite;
+    background: linear-gradient(45deg, transparentize($yellow, 0.2), transparentize($orange, 0.2));
+    position: absolute;
+    text-align: center;
+    width: 100%;
+    padding: $small-spacing $base-spacing;
+    transform: rotate(12deg);
+    left: 0;
+    right: 0;
+    text-transform: uppercase;
+    top: 50%;
+    z-index: 10;
   }
 
   &__language {
