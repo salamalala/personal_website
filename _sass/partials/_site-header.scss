@@ -30,6 +30,7 @@
   }
 
   &__construction {
+    font-family: $secondary-font;
     color: $offwhite;
     background: linear-gradient(45deg, transparentize($yellow, 0.2), transparentize($orange, 0.2));
     position: absolute;
@@ -111,7 +112,7 @@
   }
 
   &__subtitle {
-    color: $dark-turquois;
+    color: $orange;
     position: absolute;
     left: 10%;
     top: 0;
