@@ -564,6 +564,8 @@ body, html {
       .site-footer--contacts {
         margin-right: 0;
         float: right; } }
+    .site-footer--contacts li {
+      margin-top: 0.5627813555em; }
   .site-footer--contact {
     color: #E8E1D3;
     transition: all 0.5s ease-out; }
